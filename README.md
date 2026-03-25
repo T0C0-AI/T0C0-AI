@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:1a1b4b,100:4c1d95&height=250&section=header&text=%EA%B0%95%EB%8B%A4%EB%8B%88%EC%97%98&fontSize=50&fontColor=e2e8f0&fontAlignY=30&desc=Toco%20AI%20%E2%80%94%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EC%98%A4%EC%BC%80%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98%20%ED%94%8C%EB%9E%AB%ED%8F%BC&descSize=18&descColor=a78bfa&descAlignY=52&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:1a1b4b,100:4c1d95&height=250&section=header&text=%EA%B0%95%EB%8B%A4%EB%8B%88%EC%97%98&fontSize=50&fontColor=e2e8f0&fontAlignY=30&desc=토코%20AI%20%E2%80%94%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EC%98%A4%EC%BC%80%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98%20%ED%94%8C%EB%9E%AB%ED%8F%BC&descSize=18&descColor=a78bfa&descAlignY=52&animation=fadeIn" width="100%" />
 
 <!-- Typing Animation -->
 <a href="https://github.com/T0C0-AI">
@@ -24,9 +24,9 @@
 하나의 AI가 아닌, **팀으로 움직이는 AI**를 만듭니다.
 AI 에이전트가 사람처럼 협업하고, 스스로 판단하고, 함께 문제를 해결하는 세상을 꿈꿉니다.
 
-그 비전을 현실로 만들기 위해 **Toco** — AI 에이전트 오케스트레이션 플랫폼을 설계하고 있습니다.
+그 비전을 현실로 만들기 위해 **토코** — AI 에이전트 오케스트레이션 플랫폼을 설계하고 있습니다.
 macOS 데스크톱 자동화부터 실시간 음성 통역, 컴퓨터 비전, RAG 기반 지식 시스템까지 —
-Toco 생태계 안에서 에이전트들이 각자의 역할을 수행하며 하나의 목표를 향해 움직입니다.
+토코 생태계 안에서 에이전트들이 각자의 역할을 수행하며 하나의 목표를 향해 움직입니다.
 
 > *"토코AI와 함께 모험을 떠나요!"*
 
@@ -36,10 +36,10 @@ Toco 생태계 안에서 에이전트들이 각자의 역할을 수행하며 하
 
 <br>
 
-<!-- Toco Ecosystem -->
+<!-- 토코 Ecosystem -->
 <div align="center">
 
-## 🏗️ Toco 생태계
+## 🏗️ 토코 생태계
 
 <sub>AI 에이전트들이 협업하는 오케스트레이션 플랫폼</sub>
 
