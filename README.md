@@ -189,11 +189,11 @@ Toco 생태계 안에서 에이전트들이 각자의 역할을 수행하며 하
 
 <br>
 
-[![Blog](https://img.shields.io/badge/Naver_Blog-03C75A?style=for-the-badge&logo=naver&logoColor=white)](https://blog.naver.com/ejdnjs0930)
+[![Blog](https://img.shields.io/badge/네이버_블로그-03C75A?style=for-the-badge&logo=naver&logoColor=white)](https://blog.naver.com/ejdnjs0930)
 &nbsp;
-[![Email](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ejdnjs0930@gmail.com)
+[![Email](https://img.shields.io/badge/이메일-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ejdnjs0930@gmail.com)
 &nbsp;
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/T0C0-AI)
+[![GitHub](https://img.shields.io/badge/깃허브-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/T0C0-AI)
 
 </div>
 
