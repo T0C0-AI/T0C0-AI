@@ -131,7 +131,7 @@ Toco 생태계 안에서 에이전트들이 각자의 역할을 수행하며 하
 <!-- Tech Stack -->
 <div align="center">
 
-## 🛠️ Tech Stack
+## 🛠️ 기술 스택
 
 <br>
 
