@@ -185,7 +185,7 @@ Toco 생태계 안에서 에이전트들이 각자의 역할을 수행하며 하
 <!-- Contact -->
 <div align="center">
 
-## 📬 Contact
+## 📬 연락처
 
 <br>
 
