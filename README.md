@@ -200,4 +200,4 @@ macOS 데스크톱 자동화부터 실시간 음성 통역, 컴퓨터 비전, RA
 <br>
 
 <!-- Footer -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:4c1d95,70:1a1b4b,100:0d1117&height=150&section=footer" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:0d1117&height=150&section=footer" width="100%" />
