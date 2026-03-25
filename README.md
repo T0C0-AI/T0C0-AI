@@ -176,7 +176,7 @@ Toco 생태계 안에서 에이전트들이 각자의 역할을 수행하며 하
 
 <br><br>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=T0C0-AI&bg_color=0d1117&color=a78bfa&line=a78bfa&point=c9d1d9&area=true&area_color=a78bfa&hide_border=true&custom_title=Contribution%20Graph" width="95%" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=T0C0-AI&bg_color=0d1117&color=a78bfa&line=a78bfa&point=c9d1d9&area=true&area_color=a78bfa&hide_border=true&custom_title=%EA%B8%B0%EC%97%AC%20%EA%B7%B8%EB%9E%98%ED%94%84" width="95%" />
 
 </div>
 
