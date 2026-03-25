@@ -162,7 +162,7 @@ Toco 생태계 안에서 에이전트들이 각자의 역할을 수행하며 하
 <!-- GitHub Stats -->
 <div align="center">
 
-## 📈 GitHub Stats
+## 📈 GitHub 통계
 
 <br>
 
