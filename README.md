@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Header -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:1a1b4b,100:4c1d95&height=250&section=header&text=KANG%20DANIEL&fontSize=50&fontColor=e2e8f0&fontAlignY=30&desc=Toco%20AI%20%E2%80%94%20Agent%20Orchestration%20Platform&descSize=18&descColor=a78bfa&descAlignY=52&animation=fadeIn" width="100%" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,30:1a1b4b,100:4c1d95&height=250&section=header&text=%EA%B0%95%EB%8B%A4%EB%8B%88%EC%97%98&fontSize=50&fontColor=e2e8f0&fontAlignY=30&desc=Toco%20AI%20%E2%80%94%20%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8%20%EC%98%A4%EC%BC%80%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98%20%ED%94%8C%EB%9E%AB%ED%8F%BC&descSize=18&descColor=a78bfa&descAlignY=52&animation=fadeIn" width="100%" />
 
 <!-- Typing Animation -->
 <a href="https://github.com/T0C0-AI">
