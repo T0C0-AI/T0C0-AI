@@ -39,7 +39,7 @@ Toco 생태계 안에서 에이전트들이 각자의 역할을 수행하며 하
 <!-- Toco Ecosystem -->
 <div align="center">
 
-## 🏗️ Toco Ecosystem
+## 🏗️ Toco 생태계
 
 <sub>AI 에이전트들이 협업하는 오케스트레이션 플랫폼</sub>
 
