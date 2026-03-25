@@ -135,7 +135,7 @@ Toco 생태계 안에서 에이전트들이 각자의 역할을 수행하며 하
 
 <br>
 
-#### Languages
+#### 언어
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![Rust](https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white)
