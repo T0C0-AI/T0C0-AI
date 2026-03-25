@@ -5,7 +5,7 @@
 
 <!-- Typing Animation -->
 <a href="https://github.com/T0C0-AI">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&repeat=true&width=620&height=45&lines=AI+Agent+Orchestration+Platform+Builder;Where+Agents+Collaborate+as+a+Team" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Noto+Sans+KR&weight=600&size=22&duration=3000&pause=1000&color=A78BFA&center=true&vCenter=true&repeat=true&width=650&height=45&lines=AI+%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8+%EC%98%A4%EC%BC%80%EC%8A%A4%ED%8A%B8%EB%A0%88%EC%9D%B4%EC%85%98+%ED%94%8C%EB%9E%AB%ED%8F%BC+%EB%B9%8C%EB%8D%94;%ED%95%98%EB%82%98%EC%9D%98+AI%EA%B0%80+%EC%95%84%EB%8B%8C%2C+%ED%8C%80%EC%9C%BC%EB%A1%9C+%EC%9B%80%EC%A7%81%EC%9D%B4%EB%8A%94+AI%EB%A5%BC+%EB%A7%8C%EB%93%AD%EB%8B%88%EB%8B%A4" alt="Typing SVG" />
 </a>
 
 </div>
