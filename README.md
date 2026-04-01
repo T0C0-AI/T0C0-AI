@@ -1,35 +1,6 @@
-<svg width="100%" height="220" viewBox="0 0 1000 220" xmlns="http://www.w3.org/2000/svg" style="background: linear-gradient(135deg, #0d1117 0%, #1a1a2e 100%);">
-  <!-- Background -->
-  <defs>
-    <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#c8b5f5;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#a78bfa;stop-opacity:1" />
-    </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-  </defs>
-  
-  <!-- Network nodes -->
-  <circle cx="120" cy="110" r="40" fill="url(#nodeGradient)" stroke="#c8b5f5" stroke-width="2" filter="url(#glow)" opacity="0.9"/>
-  <circle cx="280" cy="70" r="35" fill="url(#nodeGradient)" stroke="#c8b5f5" stroke-width="1.5" opacity="0.7"/>
-  <circle cx="280" cy="150" r="35" fill="url(#nodeGradient)" stroke="#c8b5f5" stroke-width="1.5" opacity="0.7"/>
-  <circle cx="440" cy="110" r="35" fill="url(#nodeGradient)" stroke="#c8b5f5" stroke-width="1.5" opacity="0.7"/>
-  
-  <!-- Connection lines -->
-  <line x1="160" y1="95" x2="245" y2="70" stroke="#667eea" stroke-width="2" opacity="0.6"/>
-  <line x1="160" y1="125" x2="245" y2="150" stroke="#667eea" stroke-width="2" opacity="0.6"/>
-  <line x1="315" y1="110" x2="405" y2="110" stroke="#667eea" stroke-width="2" opacity="0.6"/>
-  
-  <!-- Text -->
-  <text x="550" y="80" font-size="56" font-weight="bold" fill="#e2e8f0" font-family="'Monaco', monospace">T0C0 AI</text>
-  <text x="550" y="135" font-size="18" fill="#a78bfa" font-family="'Segoe UI', sans-serif" letter-spacing="0.5">Agent Orchestration Platform</text>
-  <text x="550" y="165" font-size="13" fill="#8b949e" font-family="'Segoe UI', sans-serif">Team of AI Agents Working Together</text>
-</svg>
+<picture>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=a78bfa,667eea&height=200&text=T0C0%20AI&fontSize=60&fontColor=fff&fontAlignY=40&section=header&reversal=false&animation=fadeIn" width="100%" />
+</picture>
 
 ---
 
