@@ -57,9 +57,9 @@
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="80%" />
 </div>
 
-## 🛠️ 기술 도메인 & 에코시스템
-
 <div align="center">
+
+## 🛠️ 기술 도메인 & 에코시스템
 
 | 🔌 Orchestration & Platform | 🧠 Intelligence & AI | ⚡ Systems & Automation |
 |:---:|:---:|:---:|
