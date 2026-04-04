@@ -174,9 +174,9 @@
 </div>
 
 
-## 📊 시스템 메트릭스 & 분석
-
 <div align="center">
+
+## 📊 시스템 메트릭스 & 분석
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=T0C0-AI&theme=nord_dark" height="190" />
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=T0C0-AI&theme=nord_dark" height="190" />
 </div>
@@ -204,9 +204,9 @@
 
 ---
 
-## 🔌 통합 & 에코시스템
-
 <div align="center">
+
+## 🔌 통합 & 에코시스템
   <img src="https://img.shields.io/badge/MCP_서버-10%2B_연동-bd00ff?style=for-the-badge&logoColor=white" />
   <img src="https://img.shields.io/badge/Claude_API-Opus%204.6%20%7C%20Sonnet%204.6-191919?style=for-the-badge&logo=anthropic&logoColor=white" />
   <img src="https://img.shields.io/badge/에이전트-8종_운영중-06b6d4?style=for-the-badge&logoColor=white" />
@@ -236,7 +236,11 @@
 
 ---
 
+<div align="center">
+
 ## ⚖️ 개발 철학 & 비전
+
+</div>
 
 > *"하나의 AI가 아닌, 팀으로 움직이는 AI. — K-Studio"*
 
