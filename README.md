@@ -158,13 +158,13 @@
 <br>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=T0C0-AI&bg_color=0d0d0d&color=bd00ff&line=bd00ff&point=ffffff&area=true&hide_border=true" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=T0C0-AI&bg_color=0d0d0d&color=bd00ff&line=bd00ff&point=ffffff&area=true&hide_border=true&height=500" width="100%" height="500" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=T0C0-AI&background=0d0d0d&ring=bd00ff&fire=ff0080&currStreakNum=bd00ff&sideNums=ffffff&currStreakLabel=bd00ff&sideLabels=ffffff&dates=ffffff&hide_border=true" width="100%" />
+  <img src="https://streak-stats.demolab.com/?user=T0C0-AI&background=0d0d0d&ring=bd00ff&fire=ff0080&currStreakNum=bd00ff&sideNums=ffffff&currStreakLabel=bd00ff&sideLabels=ffffff&dates=ffffff&hide_border=true" width="100%" />
 </div>
 
 <div align="center">
