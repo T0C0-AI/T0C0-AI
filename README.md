@@ -34,13 +34,13 @@
 
 <br>
 
-| <a href="https://github.com/T0C0-AI/toco-computer"><img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=300&h=150&fit=crop&auto=format" alt="toco-computer" width="300"></a> | <a href="https://github.com/T0C0-AI/toco-voice"><img src="https://images.unsplash.com/photo-1613412207572-5bf376466f93?w=300&h=150&fit=crop&auto=format" alt="toco-voice" width="300"></a> | <a href="https://github.com/T0C0-AI/orchestrator"><img src="https://images.unsplash.com/photo-1600443446566-c8a2e34c779b?w=300&h=150&fit=crop&auto=format" alt="orchestrator" width="300"></a> |
+| <a href="https://github.com/T0C0-AI/toco-computer"><img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=300&h=150&fit=crop&auto=format" alt="toco-computer" width="300"></a> | <a href="https://github.com/T0C0-AI/toco-voice"><img src="https://images.unsplash.com/photo-1613412207572-5bf376466f93?w=300&h=150&fit=crop&auto=format" alt="toco-voice" width="300"></a> | <a href="https://github.com/T0C0-AI/toco-orchestrator"><img src="https://images.unsplash.com/photo-1600443446566-c8a2e34c779b?w=300&h=150&fit=crop&auto=format" alt="toco-orchestrator" width="300"></a> |
 | :---: | :---: | :---: |
-| **[toco-computer](https://github.com/T0C0-AI/toco-computer)** | **[toco-voice](https://github.com/T0C0-AI/toco-voice)** | **[orchestrator](https://github.com/T0C0-AI/orchestrator)** |
+| **[toco-computer](https://github.com/T0C0-AI/toco-computer)** | **[toco-voice](https://github.com/T0C0-AI/toco-voice)** | **[toco-orchestrator](https://github.com/T0C0-AI/toco-orchestrator)** |
 | `macos`, `automation`, `desktop`, `ai-agent` | `voice`, `transcription`, `real-time`, `multilingual` | `orchestration`, `ai-agents`, `plugin`, `claude-ai` |
 | macOS 데스크톱을 AI가 직접 제어하는 오케스트레이터 에이전트 | AI 기반 회의 전사 및 실시간 다국어 동시통역 시스템 | 에이전트 배포 및 작업 지시를 담당하는 플러그인 허브 |
-| <a href="https://github.com/T0C0-AI/toco-max"><img src="https://images.unsplash.com/photo-1762242298589-582f5f6c3fb1?w=300&h=150&fit=crop&auto=format" alt="toco-max" width="300"></a> | <a href="https://github.com/T0C0-AI/recipe"><img src="https://images.unsplash.com/photo-1754039984985-ef607d80113a?w=300&h=150&fit=crop&auto=format" alt="recipe" width="300"></a> | <a href="https://github.com/T0C0-AI/rag"><img src="https://images.unsplash.com/photo-1570929057588-6952f7dd2305?w=300&h=150&fit=crop&auto=format" alt="rag" width="300"></a> |
-| **[toco-max](https://github.com/T0C0-AI/toco-max)** | **[recipe](https://github.com/T0C0-AI/recipe)** | **[rag](https://github.com/T0C0-AI/rag)** |
+| <a href="https://github.com/T0C0-AI/toco-max"><img src="https://images.unsplash.com/photo-1762242298589-582f5f6c3fb1?w=300&h=150&fit=crop&auto=format" alt="toco-max" width="300"></a> | <a href="https://github.com/T0C0-AI/toco-recipe"><img src="https://images.unsplash.com/photo-1754039984985-ef607d80113a?w=300&h=150&fit=crop&auto=format" alt="toco-recipe" width="300"></a> | <a href="https://github.com/T0C0-AI/toco-rag"><img src="https://images.unsplash.com/photo-1570929057588-6952f7dd2305?w=300&h=150&fit=crop&auto=format" alt="toco-rag" width="300"></a> |
+| **[toco-max](https://github.com/T0C0-AI/toco-max)** | **[toco-recipe](https://github.com/T0C0-AI/toco-recipe)** | **[toco-rag](https://github.com/T0C0-AI/toco-rag)** |
 | `ai`, `claude-ai`, `orchestration`, `typescript` | `recipe`, `code-generation`, `analysis`, `ai` | `rag`, `knowledge-base`, `vector-db`, `document` |
 | 토코 에이전트 팀의 핵심 두뇌 — 최상위 오케스트레이션 시스템 | 프로젝트를 분석해 레시피를 자동 생성하는 AI 빌더 | 개인 문서를 인덱싱하는 RAG 기반 지식 백과사전 |
 
