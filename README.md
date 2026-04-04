@@ -34,12 +34,12 @@
 
 <br>
 
-| <a href="https://github.com/T0C0-AI/toco-computer"><img src="https://opengraph.githubassets.com/1/T0C0-AI/toco-computer" alt="toco-computer" width="300"></a> | <a href="https://github.com/T0C0-AI/toco-voice"><img src="https://opengraph.githubassets.com/1/T0C0-AI/toco-voice" alt="toco-voice" width="300"></a> | <a href="https://github.com/T0C0-AI/orchestrator"><img src="https://opengraph.githubassets.com/1/T0C0-AI/orchestrator" alt="orchestrator" width="300"></a> |
+| <a href="https://github.com/T0C0-AI/toco-computer"><img src="https://picsum.photos/seed/toco-computer/300/150" alt="toco-computer" width="300"></a> | <a href="https://github.com/T0C0-AI/toco-voice"><img src="https://picsum.photos/seed/toco-voice/300/150" alt="toco-voice" width="300"></a> | <a href="https://github.com/T0C0-AI/orchestrator"><img src="https://picsum.photos/seed/orchestrator/300/150" alt="orchestrator" width="300"></a> |
 | :---: | :---: | :---: |
 | **[toco-computer](https://github.com/T0C0-AI/toco-computer)** | **[toco-voice](https://github.com/T0C0-AI/toco-voice)** | **[orchestrator](https://github.com/T0C0-AI/orchestrator)** |
 | `macos`, `automation`, `desktop`, `ai-agent` | `voice`, `transcription`, `real-time`, `multilingual` | `orchestration`, `ai-agents`, `plugin`, `claude-ai` |
 | macOS 데스크톱을 AI가 직접 제어하는 오케스트레이터 에이전트 | AI 기반 회의 전사 및 실시간 다국어 동시통역 시스템 | 에이전트 배포 및 작업 지시를 담당하는 플러그인 허브 |
-| <a href="https://github.com/T0C0-AI/toco-max"><img src="https://opengraph.githubassets.com/1/T0C0-AI/toco-max" alt="toco-max" width="300"></a> | <a href="https://github.com/T0C0-AI/recipe"><img src="https://opengraph.githubassets.com/1/T0C0-AI/recipe" alt="recipe" width="300"></a> | <a href="https://github.com/T0C0-AI/rag"><img src="https://opengraph.githubassets.com/1/T0C0-AI/rag" alt="rag" width="300"></a> |
+| <a href="https://github.com/T0C0-AI/toco-max"><img src="https://picsum.photos/seed/toco-max/300/150" alt="toco-max" width="300"></a> | <a href="https://github.com/T0C0-AI/recipe"><img src="https://picsum.photos/seed/recipe/300/150" alt="recipe" width="300"></a> | <a href="https://github.com/T0C0-AI/rag"><img src="https://picsum.photos/seed/rag-knowledge/300/150" alt="rag" width="300"></a> |
 | **[toco-max](https://github.com/T0C0-AI/toco-max)** | **[recipe](https://github.com/T0C0-AI/recipe)** | **[rag](https://github.com/T0C0-AI/rag)** |
 | `ai`, `claude-ai`, `orchestration`, `typescript` | `recipe`, `code-generation`, `analysis`, `ai` | `rag`, `knowledge-base`, `vector-db`, `document` |
 | 토코 에이전트 팀의 핵심 두뇌 — 최상위 오케스트레이션 시스템 | 프로젝트를 분석해 레시피를 자동 생성하는 AI 빌더 | 개인 문서를 인덱싱하는 RAG 기반 지식 백과사전 |
@@ -98,13 +98,16 @@
 
 
 
+<div align="center">
+
 ## 📂 에이전트 아키텍처 포트폴리오
 
 <details open>
 <summary><b>🔌 Orchestration Layer — 멀티 에이전트 조율 시스템</b></summary>
+<div align="center">
 
 | 에이전트 | 핵심 기술 |
-| :--- | :--- |
+| :---: | :---: |
 | [Dispatcher](https://github.com/T0C0-AI) | `Claude API` `Natural Language` `Routing` |
 | [Architect](https://github.com/T0C0-AI) | `Claude Opus` `Read-only Analysis` `Constraint Definition` |
 | [Worker-Design](https://github.com/T0C0-AI) | `TypeScript` `Architecture Planning` `Spec Writing` |
@@ -114,46 +117,55 @@
 | [Verifier](https://github.com/T0C0-AI) | `Independent Validation` `OMC Verifier` `Quality Assurance` |
 | [Tracer](https://github.com/T0C0-AI) | `Failure Diagnosis` `OMC Tracer` `Error Analysis` |
 
+</div>
 </details>
 
 <details>
 <summary><b>🧠 Intelligence Layer — RAG & 음성 처리 시스템</b></summary>
+<div align="center">
 
 | 에이전트 | 핵심 기술 |
-| :--- | :--- |
+| :---: | :---: |
 | [RAG Engine](https://github.com/T0C0-AI) | `Vector DB` `Semantic Search` `Embeddings` |
 | [Knowledge Graph](https://github.com/T0C0-AI) | `Graph Theory` `Document Relations` `Inference` |
 | [Voice Transcription](https://github.com/T0C0-AI) | `Whisper` `Real-time Streaming` `Speaker Diarization` |
 | [Live Translator](https://github.com/T0C0-AI) | `Multilingual` `Ko / En / Ja / Zh` `Low Latency` |
 | [Meeting Assistant](https://github.com/T0C0-AI) | `Summarization` `Action Items` `Auto Minutes` |
 
+</div>
 </details>
 
 <details>
 <summary><b>⚡ Automation Layer — 데스크톱 & 워크플로우 자동화</b></summary>
+<div align="center">
 
 | 에이전트 | 핵심 기술 |
-| :--- | :--- |
+| :---: | :---: |
 | [Computer Agent](https://github.com/T0C0-AI) | `macOS API` `Screen Capture` `UI Automation` |
 | [OCR Engine](https://github.com/T0C0-AI) | `Vision` `Text Extraction` `Layout Analysis` |
 | [Notion Connector](https://github.com/T0C0-AI) | `Notion API` `Database Sync` `Page Creation` |
 | [Slack Connector](https://github.com/T0C0-AI) | `Slack API` `Event Triggers` `Message Routing` |
 | [Discord Connector](https://github.com/T0C0-AI) | `Discord API` `Bot Integration` `Webhook` |
 
+</div>
 </details>
 
 <details>
 <summary><b>🛡️ Platform Layer — 레시피 & 보안 시스템</b></summary>
+<div align="center">
 
 | 에이전트 | 핵심 기술 |
-| :--- | :--- |
+| :---: | :---: |
 | [Recipe Analyzer](https://github.com/T0C0-AI) | `Project Analysis` `Pattern Learning` `supermemory` |
 | [Drift Checker](https://github.com/T0C0-AI) | `Code-Doc Comparison` `AST Analysis` `CI Hook` |
 | [Scaffold Engine](https://github.com/T0C0-AI) | `Template Generation` `Boilerplate` `Recipe-Based` |
 | [PR Guard](https://github.com/T0C0-AI) | `Recipe Validation` `CI Integration` `Compliance` |
 | [Recognition](https://github.com/T0C0-AI) | `Face Recognition` `Gesture Detection` `Edge Inference` |
 
+</div>
 </details>
+
+</div>
 
 ---
 
