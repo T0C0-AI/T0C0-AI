@@ -151,14 +151,14 @@
 <br>
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=T0C0-AI&show_icons=true&theme=algolia&bg_color=0d0d0d&title_color=bd00ff&text_color=ffffff&icon_color=06b6d4&hide_border=true" height="170" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=T0C0-AI&layout=donut&theme=algolia&bg_color=0d0d0d&title_color=bd00ff&text_color=ffffff&icon_color=06b6d4&border_color=bd00ff&hide_border=true" height="170" />
+  <img src="https://github-readme-stats-eight.vercel.app/api?username=T0C0-AI&show_icons=true&theme=algolia&bg_color=0d0d0d&title_color=bd00ff&text_color=ffffff&icon_color=06b6d4&hide_border=true" height="170" />
+  <img src="https://github-readme-stats-eight.vercel.app/api/top-langs/?username=T0C0-AI&layout=donut&theme=algolia&bg_color=0d0d0d&title_color=bd00ff&text_color=ffffff&icon_color=06b6d4&border_color=bd00ff&hide_border=true" height="170" />
 </div>
 
 <br>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=T0C0-AI&bg_color=0d0d0d&color=bd00ff&line=bd00ff&point=ffffff&area=true&hide_border=true&height=500" width="100%" height="500" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=T0C0-AI&bg_color=0d0d0d&color=bd00ff&line=bd00ff&point=ffffff&area=true&hide_border=true&height=700" width="100%" height="700" />
 </div>
 
 <br>
