@@ -25,7 +25,28 @@
 >
 > 하나의 Orchestrator가 수십 개의 전문화 에이전트를 지휘하고, 실시간으로 작업을 위임하며, 결과를 검증하는 **에이전트 오케스트레이션 플랫폼**입니다. **음성 인식**에서 **데스크톱 자동화**, **문서 RAG**에서 **코드 레시피 생성**까지 — 지능이 팀으로 움직입니다.
 
+<br>
 
+<!-- Featured Projects -->
+<div align="center">
+
+## ✨ FEATURED PROJECTS
+
+<br>
+
+| <a href="https://github.com/T0C0-AI/toco-computer"><img src="https://opengraph.githubassets.com/1/T0C0-AI/toco-computer" alt="toco-computer" width="300"></a> | <a href="https://github.com/T0C0-AI/toco-voice"><img src="https://opengraph.githubassets.com/1/T0C0-AI/toco-voice" alt="toco-voice" width="300"></a> | <a href="https://github.com/T0C0-AI/orchestrator"><img src="https://opengraph.githubassets.com/1/T0C0-AI/orchestrator" alt="orchestrator" width="300"></a> |
+| :---: | :---: | :---: |
+| **[toco-computer](https://github.com/T0C0-AI/toco-computer)** | **[toco-voice](https://github.com/T0C0-AI/toco-voice)** | **[orchestrator](https://github.com/T0C0-AI/orchestrator)** |
+| `macos`, `automation`, `desktop`, `ai-agent` | `voice`, `transcription`, `real-time`, `multilingual` | `orchestration`, `ai-agents`, `plugin`, `claude-ai` |
+| macOS 데스크톱을 AI가 직접 제어하는 오케스트레이터 에이전트 | AI 기반 회의 전사 및 실시간 다국어 동시통역 시스템 | 에이전트 배포 및 작업 지시를 담당하는 플러그인 허브 |
+| <a href="https://github.com/T0C0-AI/toco-max"><img src="https://opengraph.githubassets.com/1/T0C0-AI/toco-max" alt="toco-max" width="300"></a> | <a href="https://github.com/T0C0-AI/recipe"><img src="https://opengraph.githubassets.com/1/T0C0-AI/recipe" alt="recipe" width="300"></a> | <a href="https://github.com/T0C0-AI/rag"><img src="https://opengraph.githubassets.com/1/T0C0-AI/rag" alt="rag" width="300"></a> |
+| **[toco-max](https://github.com/T0C0-AI/toco-max)** | **[recipe](https://github.com/T0C0-AI/recipe)** | **[rag](https://github.com/T0C0-AI/rag)** |
+| `ai`, `claude-ai`, `orchestration`, `typescript` | `recipe`, `code-generation`, `analysis`, `ai` | `rag`, `knowledge-base`, `vector-db`, `document` |
+| 토코 에이전트 팀의 핵심 두뇌 — 최상위 오케스트레이션 시스템 | 프로젝트를 분석해 레시피를 자동 생성하는 AI 빌더 | 개인 문서를 인덱싱하는 RAG 기반 지식 백과사전 |
+
+</div>
+
+<br>
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" />
@@ -161,28 +182,6 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=T0C0-AI&bg_color=0d0d0d&color=bd00ff&line=bd00ff&point=ffffff&area=true&hide_border=true&height=600" width="100%" />
 </div>
 
-<br>
-
-<!-- Featured Projects -->
-<div align="center">
-
-## ✨ FEATURED PROJECTS
-
-<br>
-
-| <a href="https://github.com/T0C0-AI/toco-computer"><img src="https://opengraph.githubassets.com/1/T0C0-AI/toco-computer" alt="toco-computer" width="300"></a> | <a href="https://github.com/T0C0-AI/toco-voice"><img src="https://opengraph.githubassets.com/1/T0C0-AI/toco-voice" alt="toco-voice" width="300"></a> | <a href="https://github.com/T0C0-AI/orchestrator"><img src="https://opengraph.githubassets.com/1/T0C0-AI/orchestrator" alt="orchestrator" width="300"></a> |
-| :---: | :---: | :---: |
-| **[toco-computer](https://github.com/T0C0-AI/toco-computer)** | **[toco-voice](https://github.com/T0C0-AI/toco-voice)** | **[orchestrator](https://github.com/T0C0-AI/orchestrator)** |
-| `macos`, `automation`, `desktop`, `ai-agent` | `voice`, `transcription`, `real-time`, `multilingual` | `orchestration`, `ai-agents`, `plugin`, `claude-ai` |
-| macOS 데스크톱을 AI가 직접 제어하는 오케스트레이터 에이전트 | AI 기반 회의 전사 및 실시간 다국어 동시통역 시스템 | 에이전트 배포 및 작업 지시를 담당하는 플러그인 허브 |
-| <a href="https://github.com/T0C0-AI/toco-max"><img src="https://opengraph.githubassets.com/1/T0C0-AI/toco-max" alt="toco-max" width="300"></a> | <a href="https://github.com/T0C0-AI/recipe"><img src="https://opengraph.githubassets.com/1/T0C0-AI/recipe" alt="recipe" width="300"></a> | <a href="https://github.com/T0C0-AI/rag"><img src="https://opengraph.githubassets.com/1/T0C0-AI/rag" alt="rag" width="300"></a> |
-| **[toco-max](https://github.com/T0C0-AI/toco-max)** | **[recipe](https://github.com/T0C0-AI/recipe)** | **[rag](https://github.com/T0C0-AI/rag)** |
-| `ai`, `claude-ai`, `orchestration`, `typescript` | `recipe`, `code-generation`, `analysis`, `ai` | `rag`, `knowledge-base`, `vector-db`, `document` |
-| 토코 에이전트 팀의 핵심 두뇌 — 최상위 오케스트레이션 시스템 | 프로젝트를 분석해 레시피를 자동 생성하는 AI 빌더 | 개인 문서를 인덱싱하는 RAG 기반 지식 백과사전 |
-
-</div>
-
-<br>
 <div align="center">
   <img src="https://streak-stats.demolab.com/?user=T0C0-AI&background=0d0d0d&ring=bd00ff&fire=ff0080&currStreakNum=bd00ff&sideNums=ffffff&currStreakLabel=bd00ff&sideLabels=ffffff&dates=ffffff&hide_border=true" width="100%" />
 </div>
