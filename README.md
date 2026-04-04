@@ -75,12 +75,12 @@
 </div>
 
 
-## 🚀 핵심 에이전트 이니셔티브 (2026)
-
 <div align="center">
 
+## 🚀 핵심 에이전트 이니셔티브 (2026)
+
 | 에이전트 | 시스템 역할 | 핵심 기술 | 운영 상태 |
-| :--- | :--- | :--- | :--- |
+| :---: | :---: | :---: | :---: |
 | **[Orchestrator](https://github.com/T0C0-AI)** | 멀티 에이전트 배포 & 조율 | `Claude API` `MCP` `TypeScript` | 🟢 **Active** |
 | **[Voice](https://github.com/T0C0-AI)** | 실시간 음성 처리 & 통역 | `Whisper` `Translation` `Streaming` | 🟢 **Nominal** |
 | **[Computer](https://github.com/T0C0-AI)** | macOS 데스크톱 자동화 | `Native API` `OCR` `UI Control` | 🟢 **Full Deploy** |
