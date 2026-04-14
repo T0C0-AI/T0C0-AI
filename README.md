@@ -206,7 +206,7 @@
 
 <h3>🕐 시간대별 커밋 활동</h3>
 
-<img src="https://img.shields.io/badge/%EC%A3%BC%EA%B0%84_%EC%BB%A4%EB%B0%8B-4-bd00ff?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/%EC%A3%BC%EA%B0%84_%EC%BB%A4%EB%B0%8B-5-bd00ff?style=for-the-badge&logo=github&logoColor=white" />
 <img src="https://img.shields.io/badge/%EC%BD%94%EB%93%9C_%EB%A6%AC%EB%B7%B0-0-06b6d4?style=for-the-badge&logo=codereview&logoColor=white" />
 
 <br><br>
@@ -234,7 +234,7 @@
   <tr>
     <td>🌇 저녁 (12-18)</td>
     <td><code>███████████████</code></td>
-    <td><b>4</b></td>
+    <td><b>5</b></td>
   </tr>
   <tr>
     <td>🌙 밤 (18-24)</td>
@@ -245,7 +245,7 @@
 
 <br>
 
-<sub>마지막 갱신: 2026-04-14 07:05 UTC · GitHub Actions 자동 생성</sub>
+<sub>마지막 갱신: 2026-04-14 07:07 UTC · GitHub Actions 자동 생성</sub>
 
 </div>
 
