@@ -211,11 +211,15 @@
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/T0C0-AI/T0C0-AI/main/assets/activity-telemetry.svg" width="480" />
+<picture>
+  <img src="./assets/activity-telemetry.svg" width="480" />
+</picture>
 
 <br><br>
 
-<img src="https://raw.githubusercontent.com/T0C0-AI/T0C0-AI/main/assets/weekly-activity.svg" width="480" />
+<picture>
+  <img src="./assets/weekly-activity.svg" width="480" />
+</picture>
 
 <br>
 
