@@ -130,7 +130,7 @@ def fetch_all_reviews(repos, username, days=7):
 
 def analyze_commits(commits):
     """Categorize commits by time of day (local timezone)."""
-    periods = {"dawn": 0, "morning": 0, "afternoon": 0, "night": 0}
+    periods = {"dawn": 0, "morning": 0, "lunch": 0, "evening": 0, "night": 0}
 
     for item in commits:
         date_str = item["commit"]["committer"]["date"]
@@ -141,8 +141,10 @@ def analyze_commits(commits):
             periods["dawn"] += 1
         elif local_hour < 12:
             periods["morning"] += 1
+        elif local_hour < 14:
+            periods["lunch"] += 1
         elif local_hour < 18:
-            periods["afternoon"] += 1
+            periods["evening"] += 1
         else:
             periods["night"] += 1
 
@@ -162,7 +164,8 @@ def generate_section(periods, total, reviews):
     rows = [
         ("\U0001f30c", "\uc0c8\ubcbd", "00-06", periods["dawn"]),
         ("\U0001f305", "\uc544\uce68", "06-12", periods["morning"]),
-        ("\U0001f307", "\uc800\ub141", "12-18", periods["afternoon"]),
+        ("\u2600\ufe0f", "\uc810\uc2ec", "12-14", periods["lunch"]),
+        ("\U0001f307", "\uc800\ub141", "14-18", periods["evening"]),
         ("\U0001f319", "\ubc24", "18-24", periods["night"]),
     ]
 
@@ -251,7 +254,7 @@ def main():
     periods = analyze_commits(commits)
     print(
         f"[INFO] Dawn={periods['dawn']} Morning={periods['morning']} "
-        f"Afternoon={periods['afternoon']} Night={periods['night']}"
+        f"Lunch={periods['lunch']} Evening={periods['evening']} Night={periods['night']}"
     )
 
     print(f"[INFO] Fetching code reviews...")
