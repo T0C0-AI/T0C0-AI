@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="325">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bd00ff"/>
+      <stop offset="100%" stop-color="#ff0080"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="480" height="325" fill="#0d1117" rx="12"/>
+
+  <text x="240" y="28" text-anchor="middle" fill="#ffffff"
+        font-family="'Segoe UI', sans-serif" font-size="17" font-weight="bold"
+        filter="url(#glow)">커밋 활동 시간대 (KST)</text>
+
+  <text x="240" y="48" text-anchor="middle" fill="#8b949e"
+        font-family="'Segoe UI', sans-serif" font-size="12">최근 7일 · 총 7건</text>
+
+  <line x1="20" y1="58" x2="460" y2="58" stroke="#21262d" stroke-width="1"/>
+
+  <text x="110" y="88" text-anchor="end" fill="#c9d1d9" font-family="'Segoe UI', sans-serif" font-size="13">새벽</text>
+  <text x="110" y="102" text-anchor="end" fill="#484f58" font-family="'Segoe UI', sans-serif" font-size="10">00:00 - 06:00</text>
+  <rect x="120" y="74" width="260" height="24" fill="#161b22" rx="6"/>
+  <text x="392" y="92" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">0</text>
+  <text x="110" y="132" text-anchor="end" fill="#c9d1d9" font-family="'Segoe UI', sans-serif" font-size="13">아침</text>
+  <text x="110" y="146" text-anchor="end" fill="#484f58" font-family="'Segoe UI', sans-serif" font-size="10">06:00 - 12:00</text>
+  <rect x="120" y="118" width="260" height="24" fill="#161b22" rx="6"/>
+  <text x="392" y="136" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">0</text>
+  <text x="110" y="176" text-anchor="end" fill="#c9d1d9" font-family="'Segoe UI', sans-serif" font-size="13">점심</text>
+  <text x="110" y="190" text-anchor="end" fill="#484f58" font-family="'Segoe UI', sans-serif" font-size="10">12:00 - 14:00</text>
+  <rect x="120" y="162" width="260" height="24" fill="#161b22" rx="6"/>
+  <text x="392" y="180" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">0</text>
+  <text x="110" y="220" text-anchor="end" fill="#c9d1d9" font-family="'Segoe UI', sans-serif" font-size="13">저녁</text>
+  <text x="110" y="234" text-anchor="end" fill="#484f58" font-family="'Segoe UI', sans-serif" font-size="10">14:00 - 18:00</text>
+  <rect x="120" y="206" width="260" height="24" fill="#161b22" rx="6"/>
+  <rect x="120" y="206" width="260" height="24" fill="url(#grad)" rx="6"/>
+  <text x="392" y="224" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">7</text>
+  <text x="110" y="264" text-anchor="end" fill="#c9d1d9" font-family="'Segoe UI', sans-serif" font-size="13">밤</text>
+  <text x="110" y="278" text-anchor="end" fill="#484f58" font-family="'Segoe UI', sans-serif" font-size="10">18:00 - 24:00</text>
+  <rect x="120" y="250" width="260" height="24" fill="#161b22" rx="6"/>
+  <text x="392" y="268" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="14" font-weight="bold">0</text>
+
+  <text x="240" y="315" text-anchor="middle" fill="#484f58"
+        font-family="'Segoe UI', sans-serif" font-size="10">2026-04-14 16:16 KST</text>
+</svg>

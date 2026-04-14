@@ -206,51 +206,16 @@
 
 <h3>🕐 시간대별 커밋 활동</h3>
 
-<img src="https://img.shields.io/badge/%EC%A3%BC%EA%B0%84_%EC%BB%A4%EB%B0%8B-5-bd00ff?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/%EC%A3%BC%EA%B0%84_%EC%BB%A4%EB%B0%8B-7-bd00ff?style=for-the-badge&logo=github&logoColor=white" />
 <img src="https://img.shields.io/badge/%EC%BD%94%EB%93%9C_%EB%A6%AC%EB%B7%B0-0-06b6d4?style=for-the-badge&logo=codereview&logoColor=white" />
 
 <br><br>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=T0C0-AI&theme=nord_dark&utcOffset=9" height="180" />
-
-<br><br>
-
-<table>
-  <tr>
-    <th>시간대</th>
-    <th>활동 분포</th>
-    <th>커밋</th>
-  </tr>
-  <tr>
-    <td>🌌 새벽 (00-06)</td>
-    <td><code>░░░░░░░░░░░░░░░</code></td>
-    <td><b>0</b></td>
-  </tr>
-  <tr>
-    <td>🌅 아침 (06-12)</td>
-    <td><code>░░░░░░░░░░░░░░░</code></td>
-    <td><b>0</b></td>
-  </tr>
-  <tr>
-    <td>☀️ 점심 (12-14)</td>
-    <td><code>░░░░░░░░░░░░░░░</code></td>
-    <td><b>0</b></td>
-  </tr>
-  <tr>
-    <td>🌇 저녁 (14-18)</td>
-    <td><code>███████████████</code></td>
-    <td><b>5</b></td>
-  </tr>
-  <tr>
-    <td>🌙 밤 (18-24)</td>
-    <td><code>░░░░░░░░░░░░░░░</code></td>
-    <td><b>0</b></td>
-  </tr>
-</table>
+<img src="assets/activity-telemetry.svg" width="480" />
 
 <br>
 
-<sub>마지막 갱신: 2026-04-14 07:07 UTC · GitHub Actions 자동 생성</sub>
+<sub>마지막 갱신: 2026-04-14 16:16 KST · GitHub Actions 자동 생성</sub>
 
 </div>
 

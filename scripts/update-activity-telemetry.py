@@ -2,13 +2,11 @@
 """
 T0C0 AI — Operator Activity Telemetry Generator
 
-Fetches GitHub activity data and generates a telemetry section for README.md.
-Runs in GitHub Actions on a daily schedule.
+Fetches GitHub activity data and generates:
+  - Custom SVG bar chart (assets/activity-telemetry.svg)
+  - README telemetry section with badges + chart
 
-Metrics:
-  - Weekly commit count (per-repo Commits API — covers private repos)
-  - Time-of-day commit distribution (KST)
-  - Code review count (per-repo PR review events)
+Runs in GitHub Actions on a daily schedule.
 """
 
 import json
@@ -22,6 +20,7 @@ from urllib.error import HTTPError
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", "T0C0-AI")
 README_PATH = os.environ.get("README_PATH", "README.md")
+SVG_PATH = os.environ.get("SVG_PATH", "assets/activity-telemetry.svg")
 UTC_OFFSET = int(os.environ.get("UTC_OFFSET", "9"))
 
 START_MARKER = "<!-- ACTIVITY-TELEMETRY:START -->"
@@ -30,6 +29,8 @@ END_MARKER = "<!-- ACTIVITY-TELEMETRY:END -->"
 LOCAL_TZ = timezone(timedelta(hours=UTC_OFFSET))
 
 
+# ── GitHub API ──────────────────────────────────────────
+
 def github_api(url):
     headers = {
         "Accept": "application/vnd.github+json",
@@ -37,7 +38,6 @@ def github_api(url):
     }
     if GITHUB_TOKEN:
         headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
-
     req = Request(url, headers=headers)
     try:
         with urlopen(req, timeout=30) as resp:
@@ -48,10 +48,10 @@ def github_api(url):
 
 
 def github_api_paginate(url_template, per_page=100, max_pages=10):
-    """Paginate through GitHub API results."""
     all_items = []
     for page in range(1, max_pages + 1):
-        url = f"{url_template}{'&' if '?' in url_template else '?'}per_page={per_page}&page={page}"
+        sep = "&" if "?" in url_template else "?"
+        url = f"{url_template}{sep}per_page={per_page}&page={page}"
         data = github_api(url)
         if not data or not isinstance(data, list):
             break
@@ -62,9 +62,8 @@ def github_api_paginate(url_template, per_page=100, max_pages=10):
 
 
 def fetch_repos(username):
-    """Fetch all repos owned by user (including private)."""
     repos = github_api_paginate(
-        f"https://api.github.com/user/repos?affiliation=owner&sort=pushed"
+        "https://api.github.com/user/repos?affiliation=owner&sort=pushed"
     )
     if not repos:
         repos = github_api_paginate(
@@ -74,112 +73,162 @@ def fetch_repos(username):
 
 
 def fetch_all_commits(repos, username, days=7):
-    """Fetch commits from all repos using per-repo Commits API."""
     since = (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
     all_commits = []
-
     for repo in repos:
-        repo_name = repo["full_name"]
-        url = (
-            f"https://api.github.com/repos/{repo_name}/commits"
-            f"?author={username}&since={since}"
-        )
+        name = repo["full_name"]
+        url = f"https://api.github.com/repos/{name}/commits?author={username}&since={since}"
         commits = github_api_paginate(url)
         if commits:
-            print(f"[INFO]   {repo_name}: {len(commits)} commits")
+            print(f"[INFO]   {name}: {len(commits)} commits")
             all_commits.extend(commits)
-
     return all_commits
 
 
 def fetch_all_reviews(repos, username, days=7):
-    """Count PR reviews across all repos."""
     since = datetime.now(timezone.utc) - timedelta(days=days)
-    total_reviews = 0
-
+    total = 0
     for repo in repos:
-        repo_name = repo["full_name"]
+        name = repo["full_name"]
         prs = github_api_paginate(
-            f"https://api.github.com/repos/{repo_name}/pulls?state=all&sort=updated&direction=desc",
+            f"https://api.github.com/repos/{name}/pulls?state=all&sort=updated&direction=desc",
             max_pages=2,
         )
         if not prs:
             continue
-
         for pr in prs:
             updated = datetime.fromisoformat(pr["updated_at"].replace("Z", "+00:00"))
             if updated < since:
                 break
             reviews = github_api(
-                f"https://api.github.com/repos/{repo_name}/pulls/{pr['number']}/reviews"
+                f"https://api.github.com/repos/{name}/pulls/{pr['number']}/reviews"
             )
             if reviews:
                 for r in reviews:
-                    if (
-                        r.get("user", {}).get("login") == username
-                        and r.get("submitted_at")
-                    ):
-                        review_date = datetime.fromisoformat(
-                            r["submitted_at"].replace("Z", "+00:00")
-                        )
-                        if review_date >= since:
-                            total_reviews += 1
+                    if r.get("user", {}).get("login") == username and r.get("submitted_at"):
+                        rd = datetime.fromisoformat(r["submitted_at"].replace("Z", "+00:00"))
+                        if rd >= since:
+                            total += 1
+    return total
 
-    return total_reviews
 
+# ── Analysis ────────────────────────────────────────────
 
 def analyze_commits(commits):
-    """Categorize commits by time of day (local timezone)."""
     periods = {"dawn": 0, "morning": 0, "lunch": 0, "evening": 0, "night": 0}
-
     for item in commits:
         date_str = item["commit"]["committer"]["date"]
         dt = datetime.fromisoformat(date_str.replace("Z", "+00:00"))
-        local_hour = dt.astimezone(LOCAL_TZ).hour
-
-        if local_hour < 6:
+        h = dt.astimezone(LOCAL_TZ).hour
+        if h < 6:
             periods["dawn"] += 1
-        elif local_hour < 12:
+        elif h < 12:
             periods["morning"] += 1
-        elif local_hour < 14:
+        elif h < 14:
             periods["lunch"] += 1
-        elif local_hour < 18:
+        elif h < 18:
             periods["evening"] += 1
         else:
             periods["night"] += 1
-
     return periods
 
 
-def make_bar(count, max_val, width=15):
-    if max_val == 0:
-        return "\u2591" * width
-    filled = round((count / max_val) * width)
-    return "\u2588" * filled + "\u2591" * (width - filled)
+# ── SVG Chart Generation ───────────────────────────────
+
+PERIOD_META = [
+    ("dawn",    "\uc0c8\ubcbd", "00:00 - 06:00"),
+    ("morning", "\uc544\uce68", "06:00 - 12:00"),
+    ("lunch",   "\uc810\uc2ec", "12:00 - 14:00"),
+    ("evening", "\uc800\ub141", "14:00 - 18:00"),
+    ("night",   "\ubc24",       "18:00 - 24:00"),
+]
 
 
-def generate_section(periods, total, reviews):
+def generate_svg(periods, total):
     max_val = max(periods.values()) if any(periods.values()) else 1
+    now_kst = datetime.now(LOCAL_TZ).strftime("%Y-%m-%d %H:%M KST")
 
-    rows = [
-        ("\U0001f30c", "\uc0c8\ubcbd", "00-06", periods["dawn"]),
-        ("\U0001f305", "\uc544\uce68", "06-12", periods["morning"]),
-        ("\u2600\ufe0f", "\uc810\uc2ec", "12-14", periods["lunch"]),
-        ("\U0001f307", "\uc800\ub141", "14-18", periods["evening"]),
-        ("\U0001f319", "\ubc24", "18-24", periods["night"]),
-    ]
+    bar_max_w = 260
+    row_h = 44
+    top_pad = 70
+    left_label = 110
+    bar_x = 120
+    svg_w = 480
+    svg_h = top_pad + len(PERIOD_META) * row_h + 35
 
-    table_rows = ""
-    for emoji, name, hours, count in rows:
-        bar = make_bar(count, max_val)
-        table_rows += (
-            f"  <tr>\n"
-            f"    <td>{emoji} {name} ({hours})</td>\n"
-            f"    <td><code>{bar}</code></td>\n"
-            f"    <td><b>{count}</b></td>\n"
-            f"  </tr>\n"
+    rows_svg = ""
+    for i, (key, label, hours) in enumerate(PERIOD_META):
+        count = periods[key]
+        y = top_pad + i * row_h
+        w = round((count / max_val) * bar_max_w) if max_val > 0 and count > 0 else 0
+
+        # Label
+        rows_svg += (
+            f'  <text x="{left_label}" y="{y + 18}" text-anchor="end" '
+            f'fill="#c9d1d9" font-family="\'Segoe UI\', sans-serif" font-size="13">'
+            f'{label}</text>\n'
+        )
+        rows_svg += (
+            f'  <text x="{left_label}" y="{y + 32}" text-anchor="end" '
+            f'fill="#484f58" font-family="\'Segoe UI\', sans-serif" font-size="10">'
+            f'{hours}</text>\n'
         )
 
+        # Background track
+        rows_svg += (
+            f'  <rect x="{bar_x}" y="{y + 4}" width="{bar_max_w}" height="24" '
+            f'fill="#161b22" rx="6"/>\n'
+        )
+
+        # Filled bar
+        if w > 0:
+            rows_svg += (
+                f'  <rect x="{bar_x}" y="{y + 4}" width="{w}" height="24" '
+                f'fill="url(#grad)" rx="6"/>\n'
+            )
+
+        # Count
+        count_x = bar_x + bar_max_w + 12
+        rows_svg += (
+            f'  <text x="{count_x}" y="{y + 22}" fill="#ffffff" '
+            f'font-family="\'Segoe UI\', sans-serif" font-size="14" font-weight="bold">'
+            f'{count}</text>\n'
+        )
+
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{svg_w}" height="{svg_h}">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#bd00ff"/>
+      <stop offset="100%" stop-color="#ff0080"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="{svg_w}" height="{svg_h}" fill="#0d1117" rx="12"/>
+
+  <text x="{svg_w // 2}" y="28" text-anchor="middle" fill="#ffffff"
+        font-family="'Segoe UI', sans-serif" font-size="17" font-weight="bold"
+        filter="url(#glow)">\ucee4\ubc0b \ud65c\ub3d9 \uc2dc\uac04\ub300 (KST)</text>
+
+  <text x="{svg_w // 2}" y="48" text-anchor="middle" fill="#8b949e"
+        font-family="'Segoe UI', sans-serif" font-size="12">\ucd5c\uadfc 7\uc77c \u00b7 \ucd1d {total}\uac74</text>
+
+  <line x1="20" y1="58" x2="{svg_w - 20}" y2="58" stroke="#21262d" stroke-width="1"/>
+
+{rows_svg}
+  <text x="{svg_w // 2}" y="{svg_h - 10}" text-anchor="middle" fill="#484f58"
+        font-family="'Segoe UI', sans-serif" font-size="10">{now_kst}</text>
+</svg>'''
+
+    return svg
+
+
+# ── README Section Generation ──────────────────────────
+
+def generate_section(total, reviews):
     now_kst = datetime.now(LOCAL_TZ).strftime("%Y-%m-%d %H:%M KST")
 
     return (
@@ -194,18 +243,7 @@ def generate_section(periods, total, reviews):
         f"\n"
         f"<br><br>\n"
         f"\n"
-        f'<img src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username={GITHUB_USERNAME}&theme=nord_dark&utcOffset={UTC_OFFSET}" height="180" />\n'
-        f"\n"
-        f"<br><br>\n"
-        f"\n"
-        f"<table>\n"
-        f"  <tr>\n"
-        f"    <th>\uc2dc\uac04\ub300</th>\n"
-        f"    <th>\ud65c\ub3d9 \ubd84\ud3ec</th>\n"
-        f"    <th>\ucee4\ubc0b</th>\n"
-        f"  </tr>\n"
-        f"{table_rows}"
-        f"</table>\n"
+        f'<img src="assets/activity-telemetry.svg" width="480" />\n'
         f"\n"
         f"<br>\n"
         f"\n"
@@ -215,6 +253,15 @@ def generate_section(periods, total, reviews):
         f"\n"
         f"{END_MARKER}"
     )
+
+
+# ── File Updates ───────────────────────────────────────
+
+def save_svg(svg_content):
+    os.makedirs(os.path.dirname(SVG_PATH), exist_ok=True)
+    with open(SVG_PATH, "w", encoding="utf-8") as f:
+        f.write(svg_content)
+    print(f"[INFO] SVG saved: {SVG_PATH}")
 
 
 def update_readme(section):
@@ -233,20 +280,21 @@ def update_readme(section):
         sys.exit(1)
 
     if new_readme == readme:
-        print("[INFO] No changes \u2014 skipping write.")
-        return
+        print("[INFO] README.md \u2014 no changes.")
+    else:
+        with open(README_PATH, "w", encoding="utf-8") as f:
+            f.write(new_readme)
+        print("[INFO] README.md updated.")
 
-    with open(README_PATH, "w", encoding="utf-8") as f:
-        f.write(new_readme)
-    print("[INFO] README.md updated.")
 
+# ── Main ───────────────────────────────────────────────
 
 def main():
     print(f"[INFO] Fetching repos for {GITHUB_USERNAME}...")
     repos = fetch_repos(GITHUB_USERNAME)
     print(f"[INFO] Found {len(repos)} repos")
 
-    print(f"[INFO] Fetching commits (last 7 days)...")
+    print("[INFO] Fetching commits (last 7 days)...")
     commits = fetch_all_commits(repos, GITHUB_USERNAME, days=7)
     total = len(commits)
     print(f"[INFO] Total: {total} commits")
@@ -257,11 +305,14 @@ def main():
         f"Lunch={periods['lunch']} Evening={periods['evening']} Night={periods['night']}"
     )
 
-    print(f"[INFO] Fetching code reviews...")
+    print("[INFO] Fetching code reviews...")
     reviews = fetch_all_reviews(repos, GITHUB_USERNAME, days=7)
     print(f"[INFO] Reviews: {reviews}")
 
-    section = generate_section(periods, total, reviews)
+    svg = generate_svg(periods, total)
+    save_svg(svg)
+
+    section = generate_section(total, reviews)
     update_readme(section)
 
 
