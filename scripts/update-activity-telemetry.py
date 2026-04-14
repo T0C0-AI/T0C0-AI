@@ -373,11 +373,11 @@ def generate_section(total, reviews):
         f"\n"
         f"<br><br>\n"
         f"\n"
-        f'<img src="assets/activity-telemetry.svg" width="480" />\n'
+        f'<img src="https://raw.githubusercontent.com/{GITHUB_USERNAME}/{GITHUB_USERNAME}/main/assets/activity-telemetry.svg" width="480" />\n'
         f"\n"
         f"<br><br>\n"
         f"\n"
-        f'<img src="assets/weekly-activity.svg" width="480" />\n'
+        f'<img src="https://raw.githubusercontent.com/{GITHUB_USERNAME}/{GITHUB_USERNAME}/main/assets/weekly-activity.svg" width="480" />\n'
         f"\n"
         f"<br>\n"
         f"\n"
