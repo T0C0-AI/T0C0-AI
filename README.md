@@ -206,16 +206,20 @@
 
 <h3>🕐 시간대별 커밋 활동</h3>
 
-<img src="https://img.shields.io/badge/%EC%A3%BC%EA%B0%84_%EC%BB%A4%EB%B0%8B-7-bd00ff?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/%EC%A3%BC%EA%B0%84_%EC%BB%A4%EB%B0%8B-8-bd00ff?style=for-the-badge&logo=github&logoColor=white" />
 <img src="https://img.shields.io/badge/%EC%BD%94%EB%93%9C_%EB%A6%AC%EB%B7%B0-0-06b6d4?style=for-the-badge&logo=codereview&logoColor=white" />
 
 <br><br>
 
 <img src="assets/activity-telemetry.svg" width="480" />
 
+<br><br>
+
+<img src="assets/weekly-activity.svg" width="480" />
+
 <br>
 
-<sub>마지막 갱신: 2026-04-14 16:16 KST · GitHub Actions 자동 생성</sub>
+<sub>마지막 갱신: 2026-04-14 16:24 KST · GitHub Actions 자동 생성</sub>
 
 </div>
 
