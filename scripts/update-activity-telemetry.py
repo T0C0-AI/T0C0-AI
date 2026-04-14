@@ -43,9 +43,12 @@ def github_api(url):
     req = Request(url, headers=headers)
     try:
         with urlopen(req, timeout=30) as resp:
-            return json.loads(resp.read().decode())
-    except HTTPError as e:
-        print(f"[WARN] GitHub API {e.code}: {url}", file=sys.stderr)
+            body = resp.read().decode()
+            if not body:
+                return None
+            return json.loads(body)
+    except (HTTPError, json.JSONDecodeError) as e:
+        print(f"[WARN] GitHub API {e}: {url}", file=sys.stderr)
         return None
 
 
