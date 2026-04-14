@@ -6,9 +6,9 @@ Fetches GitHub activity data and generates a telemetry section for README.md.
 Runs in GitHub Actions on a daily schedule.
 
 Metrics:
-  - Weekly commit count (Search Commits API)
+  - Weekly commit count (per-repo Commits API — covers private repos)
   - Time-of-day commit distribution (KST)
-  - Code review count (Search Issues API)
+  - Code review count (per-repo PR review events)
 """
 
 import json
@@ -18,7 +18,6 @@ import sys
 from datetime import datetime, timedelta, timezone
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError
-from urllib.parse import quote
 
 GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
 GITHUB_USERNAME = os.environ.get("GITHUB_USERNAME", "T0C0-AI")
@@ -48,34 +47,85 @@ def github_api(url):
         return None
 
 
-def fetch_commits(username, days=7):
-    """Fetch commits via GitHub Search Commits API."""
-    since = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
-    commits = []
-    for page in range(1, 11):  # max 1000 results (10 pages x 100)
-        q = quote(f"author:{username} committer-date:>={since}")
-        url = (
-            f"https://api.github.com/search/commits"
-            f"?q={q}&sort=committer-date&per_page=100&page={page}"
-        )
+def github_api_paginate(url_template, per_page=100, max_pages=10):
+    """Paginate through GitHub API results."""
+    all_items = []
+    for page in range(1, max_pages + 1):
+        url = f"{url_template}{'&' if '?' in url_template else '?'}per_page={per_page}&page={page}"
         data = github_api(url)
-        if not data or "items" not in data:
+        if not data or not isinstance(data, list):
             break
-        commits.extend(data["items"])
-        if len(data["items"]) < 100:
+        all_items.extend(data)
+        if len(data) < per_page:
             break
-    return commits
+    return all_items
 
 
-def fetch_reviews(username, days=7):
-    """Fetch PR review count via GitHub Search Issues API."""
-    since = (datetime.now(timezone.utc) - timedelta(days=days)).strftime("%Y-%m-%d")
-    q = quote(f"type:pr reviewed-by:{username} updated:>={since}")
-    url = f"https://api.github.com/search/issues?q={q}&per_page=1"
-    data = github_api(url)
-    if data and "total_count" in data:
-        return data["total_count"]
-    return 0
+def fetch_repos(username):
+    """Fetch all repos owned by user (including private)."""
+    repos = github_api_paginate(
+        f"https://api.github.com/user/repos?affiliation=owner&sort=pushed"
+    )
+    if not repos:
+        repos = github_api_paginate(
+            f"https://api.github.com/users/{username}/repos?sort=pushed"
+        )
+    return repos or []
+
+
+def fetch_all_commits(repos, username, days=7):
+    """Fetch commits from all repos using per-repo Commits API."""
+    since = (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
+    all_commits = []
+
+    for repo in repos:
+        repo_name = repo["full_name"]
+        url = (
+            f"https://api.github.com/repos/{repo_name}/commits"
+            f"?author={username}&since={since}"
+        )
+        commits = github_api_paginate(url)
+        if commits:
+            print(f"[INFO]   {repo_name}: {len(commits)} commits")
+            all_commits.extend(commits)
+
+    return all_commits
+
+
+def fetch_all_reviews(repos, username, days=7):
+    """Count PR reviews across all repos."""
+    since = datetime.now(timezone.utc) - timedelta(days=days)
+    total_reviews = 0
+
+    for repo in repos:
+        repo_name = repo["full_name"]
+        prs = github_api_paginate(
+            f"https://api.github.com/repos/{repo_name}/pulls?state=all&sort=updated&direction=desc",
+            max_pages=2,
+        )
+        if not prs:
+            continue
+
+        for pr in prs:
+            updated = datetime.fromisoformat(pr["updated_at"].replace("Z", "+00:00"))
+            if updated < since:
+                break
+            reviews = github_api(
+                f"https://api.github.com/repos/{repo_name}/pulls/{pr['number']}/reviews"
+            )
+            if reviews:
+                for r in reviews:
+                    if (
+                        r.get("user", {}).get("login") == username
+                        and r.get("submitted_at")
+                    ):
+                        review_date = datetime.fromisoformat(
+                            r["submitted_at"].replace("Z", "+00:00")
+                        )
+                        if review_date >= since:
+                            total_reviews += 1
+
+    return total_reviews
 
 
 def analyze_commits(commits):
@@ -189,10 +239,14 @@ def update_readme(section):
 
 
 def main():
-    print(f"[INFO] Fetching commits for {GITHUB_USERNAME} (last 7 days)...")
-    commits = fetch_commits(GITHUB_USERNAME, days=7)
+    print(f"[INFO] Fetching repos for {GITHUB_USERNAME}...")
+    repos = fetch_repos(GITHUB_USERNAME)
+    print(f"[INFO] Found {len(repos)} repos")
+
+    print(f"[INFO] Fetching commits (last 7 days)...")
+    commits = fetch_all_commits(repos, GITHUB_USERNAME, days=7)
     total = len(commits)
-    print(f"[INFO] Found {total} commits")
+    print(f"[INFO] Total: {total} commits")
 
     periods = analyze_commits(commits)
     print(
@@ -201,7 +255,7 @@ def main():
     )
 
     print(f"[INFO] Fetching code reviews...")
-    reviews = fetch_reviews(GITHUB_USERNAME, days=7)
+    reviews = fetch_all_reviews(repos, GITHUB_USERNAME, days=7)
     print(f"[INFO] Reviews: {reviews}")
 
     section = generate_section(periods, total, reviews)
