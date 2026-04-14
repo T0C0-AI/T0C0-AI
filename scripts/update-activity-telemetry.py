@@ -177,7 +177,7 @@ def generate_section(periods, total, reviews):
             f"  </tr>\n"
         )
 
-    now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+    now_kst = datetime.now(LOCAL_TZ).strftime("%Y-%m-%d %H:%M KST")
 
     return (
         f"{START_MARKER}\n"
@@ -206,7 +206,7 @@ def generate_section(periods, total, reviews):
         f"\n"
         f"<br>\n"
         f"\n"
-        f"<sub>\ub9c8\uc9c0\ub9c9 \uac31\uc2e0: {now_utc} \u00b7 GitHub Actions \uc790\ub3d9 \uc0dd\uc131</sub>\n"
+        f"<sub>\ub9c8\uc9c0\ub9c9 \uac31\uc2e0: {now_kst} \u00b7 GitHub Actions \uc790\ub3d9 \uc0dd\uc131</sub>\n"
         f"\n"
         f"</div>\n"
         f"\n"
