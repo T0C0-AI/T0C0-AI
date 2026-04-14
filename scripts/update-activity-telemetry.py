@@ -74,6 +74,22 @@ def fetch_repos(username):
     return repos or []
 
 
+def fetch_total_commits(repos, username):
+    """Get all-time total commit count via contributors endpoint."""
+    total = 0
+    for repo in repos:
+        name = repo["full_name"]
+        contributors = github_api(
+            f"https://api.github.com/repos/{name}/contributors?per_page=100"
+        )
+        if contributors and isinstance(contributors, list):
+            for c in contributors:
+                if c.get("login") == username:
+                    total += c.get("contributions", 0)
+                    break
+    return total
+
+
 def fetch_all_commits(repos, username, days=7):
     since = (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
     all_commits = []
@@ -358,7 +374,7 @@ def generate_weekly_svg(daily, repo_ranking, total):
 
 # ── README Section Generation ──────────────────────────
 
-def generate_section(total, reviews):
+def generate_section(total, reviews, total_all_time):
     now_kst = datetime.now(LOCAL_TZ).strftime("%Y-%m-%d %H:%M KST")
 
     return (
@@ -368,6 +384,7 @@ def generate_section(total, reviews):
         f"\n"
         f"<h3>\U0001f550 \uc2dc\uac04\ub300\ubcc4 \ucee4\ubc0b \ud65c\ub3d9</h3>\n"
         f"\n"
+        f'<img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-{total_all_time:,}-ffffff?style=for-the-badge&logo=git&logoColor=white" />\n'
         f'<img src="https://img.shields.io/badge/%EC%A3%BC%EA%B0%84_%EC%BB%A4%EB%B0%8B-{total}-bd00ff?style=for-the-badge&logo=github&logoColor=white" />\n'
         f'<img src="https://img.shields.io/badge/%EC%BD%94%EB%93%9C_%EB%A6%AC%EB%B7%B0-{reviews}-06b6d4?style=for-the-badge&logo=codereview&logoColor=white" />\n'
         f"\n"
@@ -448,6 +465,10 @@ def main():
     print(f"[INFO] Daily: {daily}")
     print(f"[INFO] Top repos: {repo_ranking}")
 
+    print("[INFO] Fetching total all-time commits...")
+    total_all_time = fetch_total_commits(repos, GITHUB_USERNAME)
+    print(f"[INFO] All-time: {total_all_time} commits")
+
     print("[INFO] Fetching code reviews...")
     reviews = fetch_all_reviews(repos, GITHUB_USERNAME, days=7)
     print(f"[INFO] Reviews: {reviews}")
@@ -458,7 +479,7 @@ def main():
     weekly_svg = generate_weekly_svg(daily, repo_ranking, total)
     save_svg(os.path.join(SVG_DIR, "weekly-activity.svg"), weekly_svg)
 
-    section = generate_section(total, reviews)
+    section = generate_section(total, reviews, total_all_time)
     update_readme(section)
 
 
