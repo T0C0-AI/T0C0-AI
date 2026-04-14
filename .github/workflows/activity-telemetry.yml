@@ -20,7 +20,7 @@ jobs:
 
       - name: Generate telemetry
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN || secrets.GITHUB_TOKEN }}
           GITHUB_USERNAME: T0C0-AI
           UTC_OFFSET: '9'
         run: python scripts/update-activity-telemetry.py
