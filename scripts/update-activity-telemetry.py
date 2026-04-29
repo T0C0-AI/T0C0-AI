@@ -4,7 +4,7 @@ T0C0 AI — Operator Activity Telemetry Generator
 
 Generates:
   - assets/activity-telemetry.svg  (시간대별 커밋 활동)
-  - assets/weekly-activity.svg     (이번 주 활동 리포트)
+  - assets/overall-activity.svg    (전체 활동 리포트)
   - README telemetry section
 
 Runs in GitHub Actions on a daily schedule.
@@ -93,13 +93,16 @@ def fetch_total_commits(repos, username):
     return total
 
 
-def fetch_all_commits(repos, username, days=7):
-    since = (datetime.now(timezone.utc) - timedelta(days=days)).isoformat()
+def format_range_label():
+    return "전체 누적"
+
+
+def fetch_all_commits(repos, username):
     all_commits = []
     for repo in repos:
         name = repo["full_name"]
-        url = f"https://api.github.com/repos/{name}/commits?author={username}&since={since}"
-        commits = github_api_paginate(url)
+        url = f"https://api.github.com/repos/{name}/commits?author={username}"
+        commits = github_api_paginate(url, max_pages=100)
         if commits:
             for c in commits:
                 c["_repo_name"] = name.split("/")[-1]
@@ -108,30 +111,24 @@ def fetch_all_commits(repos, username, days=7):
     return all_commits
 
 
-def fetch_all_reviews(repos, username, days=7):
-    since = datetime.now(timezone.utc) - timedelta(days=days)
+def fetch_all_reviews(repos, username):
     total = 0
     for repo in repos:
         name = repo["full_name"]
         prs = github_api_paginate(
             f"https://api.github.com/repos/{name}/pulls?state=all&sort=updated&direction=desc",
-            max_pages=2,
+            max_pages=20,
         )
         if not prs:
             continue
         for pr in prs:
-            updated = datetime.fromisoformat(pr["updated_at"].replace("Z", "+00:00"))
-            if updated < since:
-                break
             reviews = github_api(
                 f"https://api.github.com/repos/{name}/pulls/{pr['number']}/reviews"
             )
             if reviews:
                 for r in reviews:
                     if r.get("user", {}).get("login") == username and r.get("submitted_at"):
-                        rd = datetime.fromisoformat(r["submitted_at"].replace("Z", "+00:00"))
-                        if rd >= since:
-                            total += 1
+                        total += 1
     return total
 
 
@@ -167,14 +164,6 @@ def analyze_daily(commits):
     return daily
 
 
-def analyze_repos(commits):
-    repo_counts = {}
-    for item in commits:
-        name = item.get("_repo_name", "unknown")
-        repo_counts[name] = repo_counts.get(name, 0) + 1
-    return sorted(repo_counts.items(), key=lambda x: x[1], reverse=True)[:3]
-
-
 # ── SVG: 시간대별 커밋 활동 ────────────────────────────
 
 PERIOD_META = [
@@ -188,7 +177,7 @@ PERIOD_META = [
 FONT = "'Segoe UI', 'Apple SD Gothic Neo', sans-serif"
 
 
-def generate_time_svg(periods, total):
+def generate_time_svg(periods, total, range_label):
     max_val = max(periods.values()) if any(periods.values()) else 1
     now_kst = datetime.now(LOCAL_TZ).strftime("%Y-%m-%d %H:%M KST")
 
@@ -236,31 +225,23 @@ def generate_time_svg(periods, total):
         font-family="{FONT}" font-size="17" font-weight="bold"
         filter="url(#glow)">\ucee4\ubc0b \ud65c\ub3d9 \uc2dc\uac04\ub300 (KST)</text>
   <text x="{svg_w // 2}" y="48" text-anchor="middle" fill="#8b949e"
-        font-family="{FONT}" font-size="12">\ucd5c\uadfc 7\uc77c \u00b7 \ucd1d {total}\uac74</text>
+        font-family="{FONT}" font-size="12">{range_label} \u00b7 \ucd1d {total}\uac74</text>
   <line x1="20" y1="58" x2="{svg_w - 20}" y2="58" stroke="#21262d" stroke-width="1"/>
 {rows_svg}  <text x="{svg_w // 2}" y="{svg_h - 10}" text-anchor="middle" fill="#484f58"
         font-family="{FONT}" font-size="10">{now_kst}</text>
 </svg>'''
 
 
-# ── SVG: 이번 주 활동 리포트 ────────────────────────────
+# ── SVG: 전체 활동 리포트 ──────────────────────────────
 
-def generate_weekly_svg(daily, repo_ranking, total):
+def generate_overall_svg(daily, total, range_label):
     now_kst = datetime.now(LOCAL_TZ)
     now_str = now_kst.strftime("%Y-%m-%d %H:%M KST")
-
-    week_end = now_kst
-    week_start = week_end - timedelta(days=6)
-    range_str = (
-        f"{week_start.month}/{week_start.day} ({DAY_NAMES_KR[week_start.weekday()]}) "
-        f"\u2014 {week_end.month}/{week_end.day} ({DAY_NAMES_KR[week_end.weekday()]})"
-    )
 
     active_days = sum(1 for v in daily.values() if v > 0)
     busiest_day = max(daily, key=daily.get) if total > 0 else "-"
 
     max_daily = max(daily.values()) if any(daily.values()) else 1
-    max_repo = repo_ranking[0][1] if repo_ranking else 1
 
     svg_w = 480
     bar_max_w = 250
@@ -270,11 +251,7 @@ def generate_weekly_svg(daily, repo_ranking, total):
     top_pad = 68
     daily_row_h = 34
     daily_section_h = 7 * daily_row_h
-    divider_y = top_pad + daily_section_h + 10
-    repo_header_y = divider_y + 22
-    repo_row_h = 30
-    repo_section_h = len(repo_ranking) * repo_row_h if repo_ranking else 30
-    summary_y = repo_header_y + repo_section_h + 25
+    summary_y = top_pad + daily_section_h + 28
     svg_h = summary_y + 35
 
     # ── Daily bars ──
@@ -298,49 +275,6 @@ def generate_weekly_svg(daily, repo_ranking, total):
             f'font-family="{FONT}" font-size="13" font-weight="bold">{count}</text>\n'
         )
 
-    # ── Divider ──
-    daily_svg += (
-        f'  <line x1="20" y1="{divider_y}" x2="{svg_w - 20}" y2="{divider_y}" '
-        f'stroke="#21262d" stroke-width="1"/>\n'
-    )
-
-    # ── Repo section header ──
-    daily_svg += (
-        f'  <text x="30" y="{repo_header_y}" fill="#8b949e" '
-        f'font-family="{FONT}" font-size="12" font-weight="bold">\uc9d1\uc911 \ub808\ud3ec</text>\n'
-    )
-
-    # ── Repo bars ──
-    medals = ["\U0001f947", "\U0001f948", "\U0001f949"]
-    repo_bar_x = 120
-    repo_bar_max_w = 230
-
-    for i, (repo_name, count) in enumerate(repo_ranking):
-        y = repo_header_y + 8 + i * repo_row_h
-        w = round((count / max_repo) * repo_bar_max_w) if max_repo > 0 else 0
-        medal = medals[i] if i < len(medals) else "\u25cf"
-
-        daily_svg += (
-            f'  <text x="110" y="{y + 17}" text-anchor="end" '
-            f'fill="#c9d1d9" font-family="{FONT}" font-size="12">{repo_name}</text>\n'
-            f'  <rect x="{repo_bar_x}" y="{y + 2}" width="{repo_bar_max_w}" height="18" fill="#161b22" rx="4"/>\n'
-        )
-        if w > 0:
-            daily_svg += (
-                f'  <rect x="{repo_bar_x}" y="{y + 2}" width="{w}" height="18" fill="url(#grad_cyan)" rx="4"/>\n'
-            )
-        daily_svg += (
-            f'  <text x="{repo_bar_x + repo_bar_max_w + 10}" y="{y + 16}" fill="#ffffff" '
-            f'font-family="{FONT}" font-size="12" font-weight="bold">{count}</text>\n'
-        )
-
-    if not repo_ranking:
-        y = repo_header_y + 8
-        daily_svg += (
-            f'  <text x="{svg_w // 2}" y="{y + 17}" text-anchor="middle" '
-            f'fill="#484f58" font-family="{FONT}" font-size="12">\uc774\ubc88 \uc8fc \ucee4\ubc0b \uc5c6\uc74c</text>\n'
-        )
-
     # ── Summary line ──
     daily_svg += (
         f'  <text x="{svg_w // 2}" y="{summary_y}" text-anchor="middle" '
@@ -355,9 +289,6 @@ def generate_weekly_svg(daily, repo_ranking, total):
     <linearGradient id="grad_weekly" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#bd00ff"/><stop offset="100%" stop-color="#ff0080"/>
     </linearGradient>
-    <linearGradient id="grad_cyan" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#06b6d4"/><stop offset="100%" stop-color="#0ea5e9"/>
-    </linearGradient>
     <filter id="glow2">
       <feGaussianBlur stdDeviation="2" result="blur"/>
       <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -366,9 +297,9 @@ def generate_weekly_svg(daily, repo_ranking, total):
   <rect width="{svg_w}" height="{svg_h}" fill="#0d1117" rx="12"/>
   <text x="{svg_w // 2}" y="28" text-anchor="middle" fill="#ffffff"
         font-family="{FONT}" font-size="17" font-weight="bold"
-        filter="url(#glow2)">\uc774\ubc88 \uc8fc \ud65c\ub3d9 \ub9ac\ud3ec\ud2b8</text>
+        filter="url(#glow2)">\uc804\uccb4 \ud65c\ub3d9 \ub9ac\ud3ec\ud2b8</text>
   <text x="{svg_w // 2}" y="48" text-anchor="middle" fill="#8b949e"
-        font-family="{FONT}" font-size="12">{range_str}</text>
+        font-family="{FONT}" font-size="12">{range_label}</text>
   <line x1="20" y1="58" x2="{svg_w - 20}" y2="58" stroke="#21262d" stroke-width="1"/>
 {daily_svg}  <text x="{svg_w // 2}" y="{svg_h - 10}" text-anchor="middle" fill="#484f58"
         font-family="{FONT}" font-size="10">{now_str}</text>
@@ -377,7 +308,7 @@ def generate_weekly_svg(daily, repo_ranking, total):
 
 # ── README Section Generation ──────────────────────────
 
-def generate_section(total, reviews, total_all_time):
+def generate_section(total, reviews, total_all_time, range_label):
     now_kst = datetime.now(LOCAL_TZ).strftime("%Y-%m-%d %H:%M KST")
 
     return (
@@ -386,9 +317,10 @@ def generate_section(total, reviews, total_all_time):
         f'<div align="center">\n'
         f"\n"
         f"<h3>\U0001f550 \uc2dc\uac04\ub300\ubcc4 \ucee4\ubc0b \ud65c\ub3d9</h3>\n"
+        f"<sub>{range_label}</sub>\n"
         f"\n"
         f'<img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-{total_all_time:,}-ffffff?style=for-the-badge&logo=git&logoColor=white" />\n'
-        f'<img src="https://img.shields.io/badge/%EC%A3%BC%EA%B0%84_%EC%BB%A4%EB%B0%8B-{total}-bd00ff?style=for-the-badge&logo=github&logoColor=white" />\n'
+        f'<img src="https://img.shields.io/badge/%EB%88%84%EC%A0%81_%EC%BB%A4%EB%B0%8B-{total}-bd00ff?style=for-the-badge&logo=github&logoColor=white" />\n'
         f'<img src="https://img.shields.io/badge/%EC%BD%94%EB%93%9C_%EB%A6%AC%EB%B7%B0-{reviews}-06b6d4?style=for-the-badge&logo=codereview&logoColor=white" />\n'
         f"\n"
         f"<br><br>\n"
@@ -400,7 +332,7 @@ def generate_section(total, reviews, total_all_time):
         f"<br><br>\n"
         f"\n"
         f'<picture>\n'
-        f'  <img src="./assets/weekly-activity.svg" width="480" />\n'
+        f'  <img src="./assets/overall-activity.svg" width="480" />\n'
         f'</picture>\n'
         f"\n"
         f"<br>\n"
@@ -452,37 +384,37 @@ def main():
     repos = fetch_repos(GITHUB_USERNAME)
     print(f"[INFO] Found {len(repos)} repos")
 
-    print("[INFO] Fetching commits (last 7 days)...")
-    commits = fetch_all_commits(repos, GITHUB_USERNAME, days=7)
+    range_label = format_range_label()
+
+    print("[INFO] Fetching all-time commits...")
+    commits = fetch_all_commits(repos, GITHUB_USERNAME)
     total = len(commits)
     print(f"[INFO] Total: {total} commits")
 
     periods = analyze_commits(commits)
     daily = analyze_daily(commits)
-    repo_ranking = analyze_repos(commits)
 
     print(
         f"[INFO] Dawn={periods['dawn']} Morning={periods['morning']} "
         f"Lunch={periods['lunch']} Evening={periods['evening']} Night={periods['night']}"
     )
     print(f"[INFO] Daily: {daily}")
-    print(f"[INFO] Top repos: {repo_ranking}")
 
     print("[INFO] Fetching total all-time commits...")
     total_all_time = fetch_total_commits(repos, GITHUB_USERNAME)
     print(f"[INFO] All-time: {total_all_time} commits")
 
     print("[INFO] Fetching code reviews...")
-    reviews = fetch_all_reviews(repos, GITHUB_USERNAME, days=7)
+    reviews = fetch_all_reviews(repos, GITHUB_USERNAME)
     print(f"[INFO] Reviews: {reviews}")
 
-    time_svg = generate_time_svg(periods, total)
+    time_svg = generate_time_svg(periods, total, range_label)
     save_svg(os.path.join(SVG_DIR, "activity-telemetry.svg"), time_svg)
 
-    weekly_svg = generate_weekly_svg(daily, repo_ranking, total)
-    save_svg(os.path.join(SVG_DIR, "weekly-activity.svg"), weekly_svg)
+    overall_svg = generate_overall_svg(daily, total, range_label)
+    save_svg(os.path.join(SVG_DIR, "overall-activity.svg"), overall_svg)
 
-    section = generate_section(total, reviews, total_all_time)
+    section = generate_section(total, reviews, total_all_time, range_label)
     update_readme(section)
 
 
