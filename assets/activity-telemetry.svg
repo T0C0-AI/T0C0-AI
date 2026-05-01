@@ -13,33 +13,33 @@
         font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="17" font-weight="bold"
         filter="url(#glow)">커밋 활동 시간대 (KST)</text>
   <text x="240" y="48" text-anchor="middle" fill="#8b949e"
-        font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="12">전체 누적 · 총 3879건</text>
+        font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="12">전체 누적 · 총 3960건</text>
   <line x1="20" y1="58" x2="460" y2="58" stroke="#21262d" stroke-width="1"/>
   <text x="110" y="88" text-anchor="end" fill="#c9d1d9" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13">새벽</text>
   <text x="110" y="102" text-anchor="end" fill="#484f58" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="10">00:00 - 06:00</text>
   <rect x="120" y="74" width="260" height="24" fill="#161b22" rx="6"/>
-  <rect x="120" y="74" width="197" height="24" fill="url(#grad)" rx="6"/>
-  <text x="392" y="92" fill="#ffffff" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14" font-weight="bold">927</text>
+  <rect x="120" y="74" width="196" height="24" fill="url(#grad)" rx="6"/>
+  <text x="392" y="92" fill="#ffffff" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14" font-weight="bold">945</text>
   <text x="110" y="132" text-anchor="end" fill="#c9d1d9" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13">아침</text>
   <text x="110" y="146" text-anchor="end" fill="#484f58" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="10">06:00 - 12:00</text>
   <rect x="120" y="118" width="260" height="24" fill="#161b22" rx="6"/>
-  <rect x="120" y="118" width="99" height="24" fill="url(#grad)" rx="6"/>
+  <rect x="120" y="118" width="97" height="24" fill="url(#grad)" rx="6"/>
   <text x="392" y="136" fill="#ffffff" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14" font-weight="bold">466</text>
   <text x="110" y="176" text-anchor="end" fill="#c9d1d9" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13">점심</text>
   <text x="110" y="190" text-anchor="end" fill="#484f58" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="10">12:00 - 14:00</text>
   <rect x="120" y="162" width="260" height="24" fill="#161b22" rx="6"/>
-  <rect x="120" y="162" width="112" height="24" fill="url(#grad)" rx="6"/>
-  <text x="392" y="180" fill="#ffffff" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14" font-weight="bold">525</text>
+  <rect x="120" y="162" width="111" height="24" fill="url(#grad)" rx="6"/>
+  <text x="392" y="180" fill="#ffffff" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14" font-weight="bold">533</text>
   <text x="110" y="220" text-anchor="end" fill="#c9d1d9" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13">저녁</text>
   <text x="110" y="234" text-anchor="end" fill="#484f58" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="10">14:00 - 18:00</text>
   <rect x="120" y="206" width="260" height="24" fill="#161b22" rx="6"/>
-  <rect x="120" y="206" width="158" height="24" fill="url(#grad)" rx="6"/>
-  <text x="392" y="224" fill="#ffffff" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14" font-weight="bold">740</text>
+  <rect x="120" y="206" width="159" height="24" fill="url(#grad)" rx="6"/>
+  <text x="392" y="224" fill="#ffffff" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14" font-weight="bold">765</text>
   <text x="110" y="264" text-anchor="end" fill="#c9d1d9" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13">밤</text>
   <text x="110" y="278" text-anchor="end" fill="#484f58" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="10">18:00 - 24:00</text>
   <rect x="120" y="250" width="260" height="24" fill="#161b22" rx="6"/>
   <rect x="120" y="250" width="260" height="24" fill="url(#grad)" rx="6"/>
-  <text x="392" y="268" fill="#ffffff" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14" font-weight="bold">1221</text>
+  <text x="392" y="268" fill="#ffffff" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14" font-weight="bold">1251</text>
   <text x="240" y="315" text-anchor="middle" fill="#484f58"
-        font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="10">2026-05-01 01:30 KST</text>
+        font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="10">2026-05-02 01:05 KST</text>
 </svg>
