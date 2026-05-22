@@ -192,8 +192,8 @@
 <h3>🕐 시간대별 커밋 활동</h3>
 <sub>전체 누적</sub>
 
-<img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-5,589-ffffff?style=for-the-badge&logo=git&logoColor=white" />
-<img src="https://img.shields.io/badge/%EB%88%84%EC%A0%81_%EC%BB%A4%EB%B0%8B-4470-bd00ff?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-5,641-ffffff?style=for-the-badge&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/%EB%88%84%EC%A0%81_%EC%BB%A4%EB%B0%8B-4522-bd00ff?style=for-the-badge&logo=github&logoColor=white" />
 <img src="https://img.shields.io/badge/%EC%BD%94%EB%93%9C_%EB%A6%AC%EB%B7%B0-1-06b6d4?style=for-the-badge&logo=codereview&logoColor=white" />
 
 <br><br>
@@ -210,7 +210,7 @@
 
 <br>
 
-<sub>마지막 갱신: 2026-05-22 02:38 KST · GitHub Actions 자동 생성</sub>
+<sub>마지막 갱신: 2026-05-23 01:03 KST · GitHub Actions 자동 생성</sub>
 
 </div>
 
