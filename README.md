@@ -2,7 +2,7 @@
 
 <div align="center">
   <h1>👋 안녕하세요, 강다니엘입니다!</h1>
-  <p><i>AI가 팀으로 일하는 세상을 만드는 개발자예요 — 멀티 에이전트 오케스트레이션을 연구합니다.</i></p>
+  <p><i>AI가 팀으로 일하는 세상을 만드는 1인 프로덕트 메이커 및 바이브코더입니다. — 멀티 에이전트 오케스트레이션을 연구합니다.</i></p>
 
   <p>
     <a href="https://github.com/T0C0-AI"><img src="https://img.shields.io/badge/GitHub-T0C0--AI-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
