@@ -27,6 +27,13 @@
 
 <br>
 
+<!-- Contributions In The Last Year -->
+<div align="center">
+  <img src="https://ghchart.rshah.org/bd00ff/T0C0-AI" alt="T0C0-AI contributions in the last year" width="80%" />
+</div>
+
+<br>
+
 <!-- Featured Projects -->
 <div align="center">
 
@@ -59,15 +66,12 @@
 
 <br><br>
 
-<picture>
-  <img src="./assets/activity-telemetry.svg" width="480" />
-</picture>
-
-<br><br>
-
-<picture>
-  <img src="./assets/overall-activity.svg" width="480" />
-</picture>
+<table>
+  <tr>
+    <td align="center"><img src="./assets/activity-telemetry.svg" width="420" /></td>
+    <td align="center"><img src="./assets/overall-activity.svg" width="420" /></td>
+  </tr>
+</table>
 
 <br>
 
