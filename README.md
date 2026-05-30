@@ -29,18 +29,28 @@
 
 <div align="center">
 
+<h3>🕐 시간대별 커밋 활동</h3>
+<sub>전체 누적</sub>
+
+<img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-6,291-ffffff?style=for-the-badge&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/%EB%88%84%EC%A0%81_%EC%BB%A4%EB%B0%8B-5172-bd00ff?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/%EC%BD%94%EB%93%9C_%EB%A6%AC%EB%B7%B0-1-06b6d4?style=for-the-badge&logo=codereview&logoColor=white" />
+
 <br><br>
 
-<table>
-  <tr>
-    <td align="center"><img src="./assets/activity-telemetry.svg" width="420" /></td>
-    <td align="center"><img src="./assets/overall-activity.svg" width="420" /></td>
-  </tr>
-</table>
+<picture>
+  <img src="./assets/activity-telemetry.svg" width="480" />
+</picture>
+
+<br><br>
+
+<picture>
+  <img src="./assets/overall-activity.svg" width="480" />
+</picture>
 
 <br>
 
-<sub>마지막 갱신: 2026-05-30 01:26 KST · GitHub Actions 자동 생성</sub>
+<sub>마지막 갱신: 2026-05-31 00:35 KST · GitHub Actions 자동 생성</sub>
 
 </div>
 
