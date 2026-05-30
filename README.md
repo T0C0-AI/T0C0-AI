@@ -29,13 +29,6 @@
 
 <div align="center">
 
-<h3>🕐 시간대별 커밋 활동</h3>
-<sub>전체 누적</sub>
-
-<img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-6,291-ffffff?style=for-the-badge&logo=git&logoColor=white" />
-<img src="https://img.shields.io/badge/%EB%88%84%EC%A0%81_%EC%BB%A4%EB%B0%8B-5172-bd00ff?style=for-the-badge&logo=github&logoColor=white" />
-<img src="https://img.shields.io/badge/%EC%BD%94%EB%93%9C_%EB%A6%AC%EB%B7%B0-1-06b6d4?style=for-the-badge&logo=codereview&logoColor=white" />
-
 <br><br>
 
 <picture>
@@ -61,18 +54,3 @@
 </div>
 
 <br>
-
-<div align="center">
-  <img src="https://komarev.com/ghpvc/?username=T0C0-AI&label=SYSTEM+ACCESSES&color=bd00ff&style=flat-square" />
-  <br /><br />
-  <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="300" />
-  <br>
-  <i>"Architecture is intelligence, distributed." — T0C0 AI</i>
-  <br><br>
-  <b>T0C0 AI</b><br>
-  <i>AI Agent Orchestration | Autonomous Multi-Agent Platform</i><br>
-  <br>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=13&pause=2500&color=bd00ff&center=true&vCenter=true&width=400&height=30&lines=%5B%E2%97%8F%5D+Secure+Uplink+Active;%5B%E2%97%8F%5D+System+Integrity+Nominal;%5B%E2%97%8F%5D+Monitoring+Live+Telemetry...;%5B%E2%97%8F%5D+Awaiting+Next+Command..." alt="Live Telemetry" />
-  <br>
-  <small>© 2026 — Built with Precision & Intent by 강다니엘 | K-Studio</small>
-</div>
