@@ -27,13 +27,6 @@
 
 <br>
 
-<!-- Contributions In The Last Year -->
-<div align="center">
-  <img src="https://ghchart.rshah.org/bd00ff/T0C0-AI" alt="T0C0-AI contributions in the last year" width="80%" />
-</div>
-
-<br>
-
 <!-- Featured Projects -->
 <div align="center">
 
@@ -57,6 +50,12 @@
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="100%" />
+</div>
+
+<!-- Contributions In The Last Year -->
+<div align="center">
+  <br><br>
+  <img src="https://ghchart.rshah.org/bd00ff/T0C0-AI" alt="T0C0-AI contributions in the last year" width="80%" />
 </div>
 
 
