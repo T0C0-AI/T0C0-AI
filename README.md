@@ -1,8 +1,8 @@
 <a id="top"></a>
 
 <div align="center">
-  <h1>T0C0 AI</h1>
-  <p><i>AI Agent Orchestration · Autonomous Multi-Agent Platform</i></p>
+  <h1>👋 안녕하세요, 강다니엘입니다!</h1>
+  <p><i>AI가 팀으로 일하는 세상을 만드는 개발자예요 — 멀티 에이전트 오케스트레이션을 연구합니다.</i></p>
 
   <p>
     <a href="https://github.com/T0C0-AI"><img src="https://img.shields.io/badge/GitHub-T0C0--AI-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
@@ -17,7 +17,7 @@
 
 ## 🛠️ 기술 스택
 
-<img src="https://skillicons.dev/icons?i=ts,py,nodejs,githubactions,git&theme=dark" alt="기술 스택 아이콘" />
+<img src="https://skillicons.dev/icons?i=ts,js,py,nodejs,react,nextjs,tailwind,fastapi,docker,githubactions,git,github,postgres,redis,vscode,linux,bash,vercel,aws&perline=10&theme=dark" alt="기술 스택 아이콘" />
 
 </div>
 
@@ -49,39 +49,6 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png" width="80%" />
 </div>
-
----
-
-<div align="center">
-
-## 🔌 통합 & 에코시스템
-  <img src="https://img.shields.io/badge/MCP_서버-10%2B_연동-bd00ff?style=for-the-badge&logoColor=white" />
-  <img src="https://img.shields.io/badge/Claude_API-Opus%204.6%20%7C%20Sonnet%204.6-191919?style=for-the-badge&logo=anthropic&logoColor=white" />
-  <img src="https://img.shields.io/badge/에이전트-8종_운영중-06b6d4?style=for-the-badge&logoColor=white" />
-</div>
-
-<details>
-<summary><b>📜 MCP 서버 & 외부 통합 전체 목록</b></summary>
-<br />
-
-| 구분 | 서비스 | 역할 | 상태 |
-| :--- | :--- | :--- | :--- |
-| MCP | Notion | 데이터베이스 동기화, 페이지 자동 생성 | 🟢 Active |
-| MCP | Gmail | 이메일 읽기 / 전송 자동화 | 🟢 Active |
-| MCP | Google Calendar | 일정 조회 & 이벤트 생성 | 🟢 Active |
-| MCP | Canva | 디자인 생성 & 에셋 관리 | 🟢 Active |
-| MCP | Crypto.com | 실시간 시장 데이터 조회 | 🟢 Active |
-| MCP | Excalidraw | 다이어그램 생성 & 저장 | 🟢 Active |
-| API | Claude Opus 4.6 | 아키텍처 분석, 고품질 추론 (읽기 전용) | 🟢 Active |
-| API | Claude Sonnet 4.6 | 범용 에이전트 실행 & 코드 생성 | 🟢 Active |
-| API | Whisper | 실시간 음성 전사 | 🟢 Active |
-| Platform | GitHub Actions | CI/CD 자동화 & PR Guard | 🟢 Active |
-| Platform | Slack | 팀 알림 & 이벤트 트리거 | 🟢 Active |
-| Platform | Discord | 커뮤니티 봇 통합 | 🟡 Iterating |
-| Platform | Telegram | 실시간 알림 푸시 | 🟡 Iterating |
-
-</details>
-
 
 <br>
 
