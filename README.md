@@ -17,7 +17,10 @@
 
 ## 🛠️ 기술 스택
 
-<img src="https://skillicons.dev/icons?i=ts,js,py,nodejs,react,nextjs,tailwind,fastapi,docker,githubactions,git,github,postgres,redis,vscode,linux,bash,vercel,aws&perline=10&theme=dark" alt="기술 스택 아이콘" />
+<img src="https://skillicons.dev/icons?i=ts,js,py,nodejs,react,nextjs,tailwind,figma,fastapi,docker,githubactions,git,github,postgres,redis,vscode,linux,bash,vercel,aws&perline=10&theme=dark" alt="기술 스택 아이콘" />
+
+<br>
+<img src="https://img.shields.io/badge/Neo--Brutalism-Design_Style-FFE600?style=for-the-badge&labelColor=000000" alt="Neo-Brutalism Design Style" />
 
 </div>
 
@@ -31,15 +34,18 @@
 
 <br><br>
 
+<table><tr>
+<td align="center" valign="top">
 <picture>
-  <img src="./assets/activity-telemetry.svg" width="480" />
+  <img src="./assets/activity-telemetry.svg" width="420" />
 </picture>
-
-<br><br>
-
+</td>
+<td align="center" valign="top">
 <picture>
-  <img src="./assets/overall-activity.svg" width="480" />
+  <img src="./assets/overall-activity.svg" width="420" />
 </picture>
+</td>
+</tr></table>
 
 <br>
 

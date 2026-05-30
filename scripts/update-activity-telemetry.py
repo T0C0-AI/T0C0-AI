@@ -325,15 +325,18 @@ def generate_section(total, reviews, total_all_time, range_label):
         f"\n"
         f"<br><br>\n"
         f"\n"
+        f'<table><tr>\n'
+        f'<td align="center" valign="top">\n'
         f'<picture>\n'
-        f'  <img src="./assets/activity-telemetry.svg" width="480" />\n'
+        f'  <img src="./assets/activity-telemetry.svg" width="420" />\n'
         f'</picture>\n'
-        f"\n"
-        f"<br><br>\n"
-        f"\n"
+        f'</td>\n'
+        f'<td align="center" valign="top">\n'
         f'<picture>\n'
-        f'  <img src="./assets/overall-activity.svg" width="480" />\n'
+        f'  <img src="./assets/overall-activity.svg" width="420" />\n'
         f'</picture>\n'
+        f'</td>\n'
+        f'</tr></table>\n'
         f"\n"
         f"<br>\n"
         f"\n"
