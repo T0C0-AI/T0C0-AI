@@ -56,7 +56,7 @@
 
 <br>
 
-<sub>마지막 갱신: 2026-06-06 01:11 KST · GitHub Actions 자동 생성</sub>
+<sub>마지막 갱신: 2026-06-07 00:39 KST · GitHub Actions 자동 생성</sub>
 
 </div>
 
