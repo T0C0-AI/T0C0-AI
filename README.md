@@ -42,7 +42,31 @@
 
 <br>
 
+<div align="center">
+
+## 🧭 여정
+
+<sub>계정 생성 8개월, 혼자서 여기까지 걸어왔다</sub>
+
+<br>
+
+<img src="./assets/journey.svg" width="100%" alt="여정 로드맵 — 계정 생성부터 지금까지" />
+
+</div>
+
+<br>
+
+<div align="center">
+
 ## 🚀 지금 만들고 있는 것들
+
+<sub>대표작 4종 — 각각 하나의 작은 세계</sub>
+
+<br>
+
+<img src="./assets/projects.svg" width="100%" alt="프로젝트 미니 디오라마 — 대표작 4종" />
+
+</div>
 
 > 대부분 🔒 private — 솔로 메이커의 실험실은 원래 문이 닫혀 있다. 완성되면 하나씩 공개.
 
