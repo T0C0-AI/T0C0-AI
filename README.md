@@ -130,17 +130,13 @@ flowchart LR
 
 <div align="center">
 
-## 🐍 잔디 먹는 뱀
+## 🌈 3D 컨트리뷰션
 
-<sub>잔디의 대부분은 private 레포에 숨어 있다 — 뱀은 보이는 것만 먹는다.</sub>
+<sub>1년치 활동을 무지개 3D로 쌓았다 — private 기여까지 포함한 진짜 밀도.</sub>
 
 <br><br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/T0C0-AI/T0C0-AI/output/snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/T0C0-AI/T0C0-AI/output/snake.svg" />
-  <img src="https://raw.githubusercontent.com/T0C0-AI/T0C0-AI/output/snake-dark.svg" width="100%" alt="컨트리뷰션 그래프를 먹는 뱀" />
-</picture>
+<img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D 컨트리뷰션 캘린더 — night rainbow" />
 
 </div>
 
@@ -160,7 +156,7 @@ flowchart LR
 <div align="center">
 <sub>이 페이지의 히어로 · 터미널 · 디바이더 · 푸터는 라이브러리 없이 손으로 만든 애니메이션 SVG입니다 ✋</sub>
 <br>
-<sub>텔레메트리는 매일 00:00 KST, 뱀은 00:10 KST에 GitHub Actions가 자동 갱신</sub>
+<sub>텔레메트리·3D 컨트리뷰션은 매일 자정(KST) GitHub Actions가 자동 갱신</sub>
 <br><br>
 <a href="#top"><img src="https://img.shields.io/badge/⬆_맨_위로-FFC831?style=for-the-badge&labelColor=000000" alt="맨 위로" /></a>
 <br><br>
