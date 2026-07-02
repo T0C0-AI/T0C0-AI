@@ -67,38 +67,13 @@ flowchart LR
 
 | 프로젝트 | 무엇을 하는 물건인가 | 스택 | 상태 |
 |---|---|---|---|
-| 🗺 **tocosteps** | 사진만 올리면 한국 지도 위에 추억 동선이 자동으로 그려지고, 스크롤하면 영화처럼 재생되는 추억 아카이브 | `TypeScript` | 🔒 빌드 중 |
 | 🧠 **Stockmind** | 한국 주식을 AI가 분석·시뮬레이션하고 내 매매를 복기해 주는, 나 혼자 쓰는 투자 두뇌 — 단정 금지, 확률과 근거만 | `TypeScript` | 🔒 운용 중 |
 | 🤖 **Orchestrator** | 오케스트레이터의 지시로 프로젝트에 필요한 에이전트를 배포하는 멀티 에이전트 플러그인 | `JavaScript` | 🔒 연구 중 |
-| 🚗 **dn8-assistant** | Hyundai Developers 공식 API 기반 — 내 차(DN8)의 상태·연비·정비·출발 브리핑을 챙기는 AI 차량 비서 | `Python` | 🔒 빌드 중 |
 | 🎬 **toko-creator** | 토코 캐릭터가 진행하는 AI 숏폼 자동 생성 시스템 | `Python` | 🔒 빌드 중 |
 | 🎙 **Real-Proceedings** | 실시간 STT + 화자 분리 + 끝나면 AI 요약까지, 개인용 회의록 앱 | `TypeScript` | 🔒 빌드 중 |
 | 🏙 **Changwon-Digital-Twin** | 창원시 데이터를 3D 지도에 올리고 교통·날씨·대기질·재난을 실시간 패널로 — 로컬 우선 디지털 트윈 | `TypeScript` | 🔒 빌드 중 |
-| 🕵 **opportunity-os** | 기업 이벤트를 감지(Signal) → 추론(Reasoning) → 행동(Action)하는 Event Intelligence · AI Sales Agent | `TypeScript` | 🔒 설계 중 |
 
-<details>
-<summary><b>🧪 실험실 더 보기 (+12)</b></summary>
 
-<br>
-
-| 프로젝트 | 한 줄 | 스택 |
-|---|---|---|
-| 🎞 **toco-dubbing** | 영상 드래그 또는 URL만으로 한국어 자막 합성 MP4 자동 생성 | `Python` |
-| 💬 **jeukseok-jamak-window** | 즉석자막 — 실시간 자막 Windows 데스크톱 앱 (Tauri) | `Python` |
-| 🇯🇵 **jp-ko-subtitle-mac** | 일본어/영어 소리를 듣고 한국어 자막을 만드는 도구 | `Python` |
-| 🧽 **subtitle-eraser** | 영상에 박힌 자막을 지우는 도구 | `Python` |
-| ⚽ **player-tracker** | YouTube 축구 영상 YOLO 선수 추적 분석 | `JavaScript` |
-| 💡 **idea-feed** | Threads·Instagram 아이디어 포스트 자동 수집 + Claude 초안 생성 대시보드 | `JavaScript` |
-| ⛏ **gapminer** | 사용자 불만 신호를 크롤링해 1~3일짜리 1인 제품 기회를 발굴·점수화 | `HTML/JS` |
-| 🔐 **sentinel-mac** | 맥북 분실·도난 대응 개인 보안 추적 플랫폼 | `TypeScript` |
-| 🐱 **claude-pet** | 데스크톱에 사는 Claude 펫 | `Python` |
-| 🖼 **webtoon-studio** | 웹툰 제작 스튜디오 실험 | `TypeScript` |
-| ✨ **TocoEffects** | 토코 영상용 이펙트 모음 | `HTML` |
-| 🏠 **Portfolio-Home** | 강다니엘의 포트폴리오 홈 | `HTML` |
-
-</details>
-
-<br>
 
 ## 🛠️ 기술 스택
 
