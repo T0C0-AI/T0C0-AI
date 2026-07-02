@@ -196,38 +196,33 @@ def generate_time_svg(periods, total, range_label):
 
         rows_svg += (
             f'  <text x="110" y="{y + 18}" text-anchor="end" '
-            f'fill="#c9d1d9" font-family="{FONT}" font-size="13">{label}</text>\n'
+            f'fill="#24292f" font-family="{FONT}" font-size="13">{label}</text>\n'
             f'  <text x="110" y="{y + 32}" text-anchor="end" '
-            f'fill="#484f58" font-family="{FONT}" font-size="10">{hours}</text>\n'
-            f'  <rect x="{bar_x}" y="{y + 4}" width="{bar_max_w}" height="24" fill="#161b22" rx="6"/>\n'
+            f'fill="#8b949e" font-family="{FONT}" font-size="10">{hours}</text>\n'
+            f'  <rect x="{bar_x}" y="{y + 4}" width="{bar_max_w}" height="24" fill="#f1f3f6" rx="6"/>\n'
         )
         if w > 0:
             rows_svg += (
                 f'  <rect x="{bar_x}" y="{y + 4}" width="{w}" height="24" fill="url(#grad)" rx="6"/>\n'
             )
         rows_svg += (
-            f'  <text x="{bar_x + bar_max_w + 12}" y="{y + 22}" fill="#ffffff" '
+            f'  <text x="{bar_x + bar_max_w + 12}" y="{y + 22}" fill="#151a24" '
             f'font-family="{FONT}" font-size="14" font-weight="bold">{count}</text>\n'
         )
 
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{svg_w}" height="{svg_h}">
   <defs>
     <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#bd00ff"/><stop offset="100%" stop-color="#ff0080"/>
+      <stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#ec4899"/>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
-  <rect width="{svg_w}" height="{svg_h}" fill="#0d1117" rx="12"/>
-  <text x="{svg_w // 2}" y="28" text-anchor="middle" fill="#ffffff"
-        font-family="{FONT}" font-size="17" font-weight="bold"
-        filter="url(#glow)">\ucee4\ubc0b \ud65c\ub3d9 \uc2dc\uac04\ub300 (KST)</text>
-  <text x="{svg_w // 2}" y="48" text-anchor="middle" fill="#8b949e"
+  <rect width="{svg_w}" height="{svg_h}" fill="#ffffff" rx="12" stroke="#e3e7ee" stroke-width="1"/>
+  <text x="{svg_w // 2}" y="28" text-anchor="middle" fill="#151a24"
+        font-family="{FONT}" font-size="17" font-weight="bold">\ucee4\ubc0b \ud65c\ub3d9 \uc2dc\uac04\ub300 (KST)</text>
+  <text x="{svg_w // 2}" y="48" text-anchor="middle" fill="#6b7488"
         font-family="{FONT}" font-size="12">{range_label} \u00b7 \ucd1d {total}\uac74</text>
-  <line x1="20" y1="58" x2="{svg_w - 20}" y2="58" stroke="#21262d" stroke-width="1"/>
-{rows_svg}  <text x="{svg_w // 2}" y="{svg_h - 10}" text-anchor="middle" fill="#484f58"
+  <line x1="20" y1="58" x2="{svg_w - 20}" y2="58" stroke="#e3e7ee" stroke-width="1"/>
+{rows_svg}  <text x="{svg_w // 2}" y="{svg_h - 10}" text-anchor="middle" fill="#aeb6c2"
         font-family="{FONT}" font-size="10">{now_kst}</text>
 </svg>'''
 
@@ -263,22 +258,22 @@ def generate_overall_svg(daily, total, range_label):
 
         daily_svg += (
             f'  <text x="110" y="{y + 20}" text-anchor="end" '
-            f'fill="#c9d1d9" font-family="{FONT}" font-size="14">{day}</text>\n'
-            f'  <rect x="{bar_x}" y="{y + 4}" width="{bar_max_w}" height="22" fill="#161b22" rx="5"/>\n'
+            f'fill="#24292f" font-family="{FONT}" font-size="14">{day}</text>\n'
+            f'  <rect x="{bar_x}" y="{y + 4}" width="{bar_max_w}" height="22" fill="#f1f3f6" rx="5"/>\n'
         )
         if w > 0:
             daily_svg += (
                 f'  <rect x="{bar_x}" y="{y + 4}" width="{w}" height="22" fill="url(#grad_weekly)" rx="5"/>\n'
             )
         daily_svg += (
-            f'  <text x="{bar_x + bar_max_w + 12}" y="{y + 20}" fill="#ffffff" '
+            f'  <text x="{bar_x + bar_max_w + 12}" y="{y + 20}" fill="#151a24" '
             f'font-family="{FONT}" font-size="13" font-weight="bold">{count}</text>\n'
         )
 
     # ── Summary line ──
     daily_svg += (
         f'  <text x="{svg_w // 2}" y="{summary_y}" text-anchor="middle" '
-        f'fill="#8b949e" font-family="{FONT}" font-size="11">'
+        f'fill="#6b7488" font-family="{FONT}" font-size="11">'
         f'\ud65c\ub3d9\uc77c {active_days}/7  \u00b7  '
         f'\uac00\uc7a5 \ud65c\ubc1c: {busiest_day}\uc694\uc77c  \u00b7  '
         f'\ucd1d {total}\uac74</text>\n'
@@ -287,21 +282,17 @@ def generate_overall_svg(daily, total, range_label):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{svg_w}" height="{svg_h}">
   <defs>
     <linearGradient id="grad_weekly" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#bd00ff"/><stop offset="100%" stop-color="#ff0080"/>
+      <stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#ec4899"/>
     </linearGradient>
-    <filter id="glow2">
-      <feGaussianBlur stdDeviation="2" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
-  <rect width="{svg_w}" height="{svg_h}" fill="#0d1117" rx="12"/>
-  <text x="{svg_w // 2}" y="28" text-anchor="middle" fill="#ffffff"
+  <rect width="{svg_w}" height="{svg_h}" fill="#ffffff" rx="12" stroke="#e3e7ee" stroke-width="1"/>
+  <text x="{svg_w // 2}" y="28" text-anchor="middle" fill="#151a24"
         font-family="{FONT}" font-size="17" font-weight="bold"
-        filter="url(#glow2)">\uc804\uccb4 \ud65c\ub3d9 \ub9ac\ud3ec\ud2b8</text>
-  <text x="{svg_w // 2}" y="48" text-anchor="middle" fill="#8b949e"
+        >\uc804\uccb4 \ud65c\ub3d9 \ub9ac\ud3ec\ud2b8</text>
+  <text x="{svg_w // 2}" y="48" text-anchor="middle" fill="#6b7488"
         font-family="{FONT}" font-size="12">{range_label}</text>
-  <line x1="20" y1="58" x2="{svg_w - 20}" y2="58" stroke="#21262d" stroke-width="1"/>
-{daily_svg}  <text x="{svg_w // 2}" y="{svg_h - 10}" text-anchor="middle" fill="#484f58"
+  <line x1="20" y1="58" x2="{svg_w - 20}" y2="58" stroke="#e3e7ee" stroke-width="1"/>
+{daily_svg}  <text x="{svg_w // 2}" y="{svg_h - 10}" text-anchor="middle" fill="#aeb6c2"
         font-family="{FONT}" font-size="10">{now_str}</text>
 </svg>'''
 
