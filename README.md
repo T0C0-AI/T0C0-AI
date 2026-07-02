@@ -20,44 +20,25 @@
 
 ## ⚡ whoami
 
-<img src="./assets/terminal.svg" width="880" alt="터미널: whoami — 강다니엘, 1인 프로덕트 메이커 · 바이브코더" />
+<img src="./assets/workspace.svg" width="100%" alt="아이소메트릭 작업실 — 강다니엘의 배틀스테이션" />
+
+<sub>모니터 3면 · RGB 키보드 · 김 나는 커피 · 책상 위엔 토코 — 여기서 다 만든다</sub>
 
 </div>
 
 <br>
 
-## 🐧 TOCO UNIVERSE
+<div align="center">
 
-> 토코(TOCO)는 펭귄+고양이 AI 캐릭터이자, 내가 만드는 모든 것의 구심점.
-> 하나의 캐릭터를 중심으로 영상 파이프라인 → 에이전트 → 인텔리전스 → 라이프까지 확장 중.
+## 🏙 토코 시티
 
-```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#0D1420','primaryTextColor':'#E6EDF3','primaryBorderColor':'#22D3EE','lineColor':'#8B949E','fontFamily':'monospace','mainBkg':'#0D1420','edgeLabelBackground':'#000000','clusterBkg':'#05070B','clusterBorder':'#1F2733','tertiaryTextColor':'#E6EDF3'}}}%%
-flowchart LR
-    TOCO(["🐧 TOCO<br/>펭귄 + 고양이 AI"])
-    style TOCO fill:#0D1420,stroke:#FFC831,stroke-width:2px
+<sub>내가 만든 프로젝트들이 사는 도시 — 토코가 마스코트로 지킨다</sub>
 
-    TOCO --> V["🎬 영상 파이프라인"]
-    TOCO --> A["🤖 에이전트"]
-    TOCO --> I["📈 인텔리전스"]
-    TOCO --> L["🧭 라이프 & 시티"]
+<br>
 
-    V --> V1["toko-creator<br/>AI 숏폼 자동 생성"]
-    V --> V2["toco-dubbing<br/>영상 → 한국어 자막 MP4"]
-    V --> V3["즉석자막<br/>실시간 자막 데스크톱 앱"]
+<img src="./assets/city.svg" width="100%" alt="토코 시티 — 아이소메트릭 프로젝트 도시" />
 
-    A --> A1["Orchestrator<br/>에이전트 배포 지휘"]
-    A --> A2["dn8-assistant<br/>차량 AI 비서"]
-    A --> A3["claude-pet<br/>데스크톱 펫 에이전트"]
-
-    I --> I1["Stockmind<br/>개인 투자 두뇌"]
-    I --> I2["opportunity-os<br/>AI Sales Agent"]
-    I --> I3["gapminer<br/>1인 제품 기회 발굴"]
-
-    L --> L1["tocosteps<br/>추억 동선 아카이브"]
-    L --> L2["Real-Proceedings<br/>AI 회의록"]
-    L --> L3["Changwon-Digital-Twin<br/>도시 디지털 트윈"]
-```
+</div>
 
 <br>
 
@@ -154,7 +135,7 @@ flowchart LR
 <img src="./assets/footer.svg" width="100%" alt="다음 커밋에서 만나요 — TOCO" />
 
 <div align="center">
-<sub>이 페이지의 히어로 · 터미널 · 디바이더 · 푸터는 라이브러리 없이 손으로 만든 애니메이션 SVG입니다 ✋</sub>
+<sub>이 페이지의 히어로 · 아이소메트릭 작업실 · 토코 시티 · 푸터는 라이브러리 없이 손으로 만든 애니메이션 SVG입니다 ✋</sub>
 <br>
 <sub>텔레메트리·3D 컨트리뷰션은 매일 자정(KST) GitHub Actions가 자동 갱신</sub>
 <br><br>
