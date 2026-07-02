@@ -16,6 +16,21 @@
 
 <br>
 
+## 🛠️ 기술 스택
+
+<div align="center">
+
+<img src="https://skillicons.dev/icons?i=ts,js,py,cpp,nodejs,react,nextjs,tauri,tailwind,fastapi,docker,githubactions,git,github,postgres,redis,figma,vscode,linux,bash,vercel,aws&perline=11&theme=light" alt="기술 스택 아이콘" />
+
+<br><br>
+
+<img src="https://img.shields.io/badge/Claude_Code-Daily_Driver-22D3EE?style=for-the-badge&logo=anthropic&logoColor=white&labelColor=151A24" alt="Claude Code" />
+<img src="https://img.shields.io/badge/TOCO-AI_Partner-FFC831?style=for-the-badge&labelColor=151A24" alt="TOCO AI Partner" />
+
+</div>
+
+<br>
+
 <div align="center">
 
 ## ⚡ whoami
@@ -23,6 +38,20 @@
 <img src="./assets/workspace.svg" width="100%" alt="아이소메트릭 작업실 — 강다니엘의 배틀스테이션" />
 
 <sub>모니터 3면 · RGB 키보드 · 김 나는 커피 · 책상 위엔 토코 — 여기서 다 만든다</sub>
+
+</div>
+
+<br>
+
+<div align="center">
+
+## 🌈 3D 컨트리뷰션
+
+<sub>1년치 활동을 3D 블록으로 쌓았다 — private 기여까지 포함한 진짜 밀도.</sub>
+
+<br><br>
+
+<img src="./profile-3d-contrib/profile-gitblock.svg" width="100%" alt="3D 컨트리뷰션 캘린더 — gitblock" />
 
 </div>
 
@@ -42,35 +71,11 @@
 
 <br>
 
-<div align="center">
-
-## 🧭 여정
-
-<sub>계정 생성 8개월, 혼자서 여기까지 걸어왔다</sub>
-
-<br>
-
-<img src="./assets/journey.svg" width="100%" alt="여정 로드맵 — 계정 생성부터 지금까지" />
-
-</div>
-
-<br>
-
-<div align="center">
-
 ## 🚀 지금 만들고 있는 것들
-
-<sub>대표작 4종 — 각각 하나의 작은 세계</sub>
-
-<br>
-
-<img src="./assets/projects.svg" width="100%" alt="프로젝트 미니 디오라마 — 대표작 4종" />
-
-</div>
 
 > 대부분 🔒 private — 솔로 메이커의 실험실은 원래 문이 닫혀 있다. 완성되면 하나씩 공개.
 
-| 프로젝트 | 무엇을 하는 물건인가 | 스택 | 상태 |
+| 프로젝트 | 무슨 내용인가 | 스택 | 상태 |
 |---|---|---|---|
 | 🧠 **스톡마인드** | 한국 주식을 AI가 분석·시뮬레이션하고 내 매매를 복기해 주는, 나 혼자 쓰는 투자 두뇌 — 단정 금지, 확률과 근거만 | `TypeScript` | 🔒 운용 중 |
 | 🤖 **토코 오케스트레이터** | 오케스트레이터의 지시로 프로젝트에 필요한 에이전트를 배포하는 멀티 에이전트 플러그인 | `JavaScript` | 🔒 연구 중 |
@@ -78,18 +83,13 @@
 | 🎙 **실시간 회의록** | 실시간 STT + 화자 분리 + 끝나면 AI 요약까지, 개인용 회의록 앱 | `TypeScript` | 🔒 빌드 중 |
 | 🏙 **창원 실시간 디지털 트윈** | 창원시 데이터를 3D 지도에 올리고 교통·날씨·대기질·재난을 실시간 패널로 — 로컬 우선 디지털 트윈 | `TypeScript` | 🔒 빌드 중 |
 
-
-
-## 🛠️ 기술 스택
-
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=ts,js,py,cpp,nodejs,react,nextjs,tauri,tailwind,fastapi,docker,githubactions,git,github,postgres,redis,figma,vscode,linux,bash,vercel,aws&perline=11&theme=dark" alt="기술 스택 아이콘" />
+<br>
 
-<br><br>
+<img src="./assets/projects.svg" width="100%" alt="프로젝트 미니 디오라마 — 대표작 4종" />
 
-<img src="https://img.shields.io/badge/Claude_Code-Daily_Driver-22D3EE?style=for-the-badge&logo=anthropic&logoColor=white&labelColor=000000" alt="Claude Code" />
-<img src="https://img.shields.io/badge/TOCO-AI_Partner-FFC831?style=for-the-badge&labelColor=000000" alt="TOCO AI Partner" />
+<sub>대표작 4종 — 각각 하나의 작은 세계</sub>
 
 </div>
 
@@ -104,8 +104,8 @@
 <h3>🕐 시간대별 커밋 활동</h3>
 <sub>전체 누적</sub>
 
-<img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-8,868-ffffff?style=for-the-badge&logo=git&logoColor=white" />
-<img src="https://img.shields.io/badge/%EB%88%84%EC%A0%81_%EC%BB%A4%EB%B0%8B-7749-bd00ff?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-8,868-151A24?style=for-the-badge&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/%EB%88%84%EC%A0%81_%EC%BB%A4%EB%B0%8B-7749-a855f7?style=for-the-badge&logo=github&logoColor=white" />
 <img src="https://img.shields.io/badge/%EC%BD%94%EB%93%9C_%EB%A6%AC%EB%B7%B0-1-06b6d4?style=for-the-badge&logo=codereview&logoColor=white" />
 
 <br><br>
@@ -125,7 +125,7 @@
 
 <br>
 
-<sub>마지막 갱신: 2026-07-03 01:00 KST · GitHub Actions 자동 생성</sub>
+<sub>마지막 갱신: 2026-07-03 03:42 KST · GitHub Actions 자동 생성</sub>
 
 </div>
 
@@ -133,36 +133,13 @@
 
 <br>
 
-<div align="center">
-
-## 🌈 3D 컨트리뷰션
-
-<sub>1년치 활동을 무지개 3D로 쌓았다 — private 기여까지 포함한 진짜 밀도.</sub>
-
-<br><br>
-
-<img src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%" alt="3D 컨트리뷰션 캘린더 — night rainbow" />
-
-</div>
-
-<br>
-
-## ⚑ 원칙
-
-```text
-[01] 배포되지 않은 코드는 존재하지 않는 코드다.
-[02] AI는 도구가 아니라 팀원이다. 나는 지휘자다.
-[03] 혼자서도 팀의 속도를 낸다 — 그게 솔로 메이커의 증명.
-[04] 디테일이 퀄리티를 만든다 — 마지막 1px까지.
-```
-
 <img src="./assets/footer.svg" width="100%" alt="다음 커밋에서 만나요 — TOCO" />
 
 <div align="center">
-<sub>이 페이지의 히어로 · 아이소메트릭 작업실 · 토코 시티 · 푸터는 라이브러리 없이 손으로 만든 애니메이션 SVG입니다 ✋</sub>
+<sub>이 페이지의 히어로 · 아이소메트릭 작업실 · 토코 시티 · 프로젝트 디오라마 · 푸터는 라이브러리 없이 손으로 만든 애니메이션 SVG입니다 ✋</sub>
 <br>
 <sub>텔레메트리·3D 컨트리뷰션은 매일 자정(KST) GitHub Actions가 자동 갱신</sub>
 <br><br>
-<a href="#top"><img src="https://img.shields.io/badge/⬆_맨_위로-FFC831?style=for-the-badge&labelColor=000000" alt="맨 위로" /></a>
+<a href="#top"><img src="https://img.shields.io/badge/⬆_맨_위로-FFC831?style=for-the-badge&labelColor=151A24" alt="맨 위로" /></a>
 <br><br>
 </div>
