@@ -1,0 +1,14 @@
+<svg viewBox="0 0 1200 14" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="구분선">
+  <defs>
+    <pattern id="hz" width="24" height="14" patternUnits="userSpaceOnUse">
+      <rect width="24" height="14" fill="#0A0A0A"/>
+      <polygon points="0,14 8,0 16,0 8,14" fill="#FFE600"/>
+    </pattern>
+    <clipPath id="band"><rect x="0" y="0" width="1200" height="14"/></clipPath>
+  </defs>
+  <g clip-path="url(#band)">
+    <rect x="-48" y="0" width="1296" height="14" fill="url(#hz)">
+      <animateTransform attributeName="transform" type="translate" from="0 0" to="24 0" dur="1.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
