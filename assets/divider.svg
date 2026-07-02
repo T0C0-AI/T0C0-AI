@@ -1,14 +1,22 @@
-<svg viewBox="0 0 1200 14" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="구분선">
+<svg viewBox="0 0 1200 16" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="구분선">
   <defs>
-    <pattern id="hz" width="24" height="14" patternUnits="userSpaceOnUse">
-      <rect width="24" height="14" fill="#0A0A0A"/>
-      <polygon points="0,14 8,0 16,0 8,14" fill="#FFE600"/>
-    </pattern>
-    <clipPath id="band"><rect x="0" y="0" width="1200" height="14"/></clipPath>
+    <linearGradient id="dLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#22D3EE" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#8B949E" stop-opacity="0.55"/>
+      <stop offset="80%" stop-color="#FFC831" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFC831" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="comet" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFC831" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#FFC831" stop-opacity="1"/>
+    </linearGradient>
+    <filter id="dsoft" x="-100%" y="-400%" width="300%" height="900%"><feGaussianBlur stdDeviation="1.6"/></filter>
   </defs>
-  <g clip-path="url(#band)">
-    <rect x="-48" y="0" width="1296" height="14" fill="url(#hz)">
-      <animateTransform attributeName="transform" type="translate" from="0 0" to="24 0" dur="1.2s" repeatCount="indefinite"/>
+  <rect x="0" y="7.1" width="1200" height="1.8" fill="url(#dLine)"/>
+  <g filter="url(#dsoft)">
+    <rect x="0" y="6.3" width="110" height="3.4" fill="url(#comet)">
+      <animate attributeName="x" values="-110;1200" dur="4.2s" repeatCount="indefinite"/>
     </rect>
   </g>
 </svg>
