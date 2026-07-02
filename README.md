@@ -32,9 +32,10 @@
 > 하나의 캐릭터를 중심으로 영상 파이프라인 → 에이전트 → 인텔리전스 → 라이프까지 확장 중.
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#FFE600','primaryTextColor':'#000000','primaryBorderColor':'#000000','lineColor':'#FFE600','fontFamily':'monospace','mainBkg':'#FFE600','edgeLabelBackground':'#0d0d0d','clusterBkg':'#111111','clusterBorder':'#FFE600','tertiaryTextColor':'#ffffff'}}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#0D1420','primaryTextColor':'#E6EDF3','primaryBorderColor':'#22D3EE','lineColor':'#8B949E','fontFamily':'monospace','mainBkg':'#0D1420','edgeLabelBackground':'#000000','clusterBkg':'#05070B','clusterBorder':'#1F2733','tertiaryTextColor':'#E6EDF3'}}}%%
 flowchart LR
     TOCO(["🐧 TOCO<br/>펭귄 + 고양이 AI"])
+    style TOCO fill:#0D1420,stroke:#FFC831,stroke-width:2px
 
     TOCO --> V["🎬 영상 파이프라인"]
     TOCO --> A["🤖 에이전트"]
@@ -107,8 +108,8 @@ flowchart LR
 
 <br><br>
 
-<img src="https://img.shields.io/badge/Neo--Brutalism-Design_Style-FFE600?style=for-the-badge&labelColor=000000" alt="Neo-Brutalism Design Style" />
-<img src="https://img.shields.io/badge/Claude_Code-Daily_Driver-FFE600?style=for-the-badge&logo=anthropic&logoColor=black&labelColor=000000" alt="Claude Code" />
+<img src="https://img.shields.io/badge/Claude_Code-Daily_Driver-22D3EE?style=for-the-badge&logo=anthropic&logoColor=white&labelColor=000000" alt="Claude Code" />
+<img src="https://img.shields.io/badge/TOCO-AI_Partner-FFC831?style=for-the-badge&labelColor=000000" alt="TOCO AI Partner" />
 
 </div>
 
@@ -176,17 +177,16 @@ flowchart LR
 [01] 배포되지 않은 코드는 존재하지 않는 코드다.
 [02] AI는 도구가 아니라 팀원이다. 나는 지휘자다.
 [03] 혼자서도 팀의 속도를 낸다 — 그게 솔로 메이커의 증명.
-[04] 직각 모서리, 검정과 노랑. Neo-Brutalism.
+[04] 디테일이 퀄리티를 만든다 — 마지막 1px까지.
 ```
 
-<img src="./assets/divider.svg" width="100%" alt="" />
+<img src="./assets/footer.svg" width="100%" alt="다음 커밋에서 만나요 — TOCO" />
 
 <div align="center">
-<br>
-<sub>이 페이지의 히어로 · 터미널 · 디바이더는 라이브러리 없이 손으로 만든 애니메이션 SVG입니다 ✋🐧</sub>
+<sub>이 페이지의 히어로 · 터미널 · 디바이더 · 푸터는 라이브러리 없이 손으로 만든 애니메이션 SVG입니다 ✋</sub>
 <br>
 <sub>텔레메트리는 매일 00:00 KST, 뱀은 00:10 KST에 GitHub Actions가 자동 갱신</sub>
 <br><br>
-<a href="#top"><img src="https://img.shields.io/badge/⬆_맨_위로-FFE600?style=for-the-badge&labelColor=000000" alt="맨 위로" /></a>
+<a href="#top"><img src="https://img.shields.io/badge/⬆_맨_위로-FFC831?style=for-the-badge&labelColor=000000" alt="맨 위로" /></a>
 <br><br>
 </div>
