@@ -176,8 +176,23 @@ PERIOD_META = [
 
 FONT = "'Segoe UI', 'Apple SD Gothic Neo', sans-serif"
 
+# \ub77c\uc774\ud2b8/\ub2e4\ud06c \uacf5\ud1b5 \ud314\ub808\ud2b8 \u2014 GitHub \ud504\ub85c\ud544\uc758 light/dark \ud14c\ub9c8 \uc804\ud658\uc5d0 \ub9de\ucdb0 \uce74\ub4dc \ubc30\uacbd\u00b7\uae00\uc790\uc0c9\ub9cc \ubc14\uafbc\ub2e4.
+PALETTES = {
+    "light": {
+        "bg": "#ffffff", "border": "#e3e7ee", "title": "#151a24", "meta": "#6b7488",
+        "label": "#24292f", "sub": "#8b949e", "track": "#f1f3f6", "count": "#151a24",
+        "footer": "#aeb6c2",
+    },
+    "dark": {
+        "bg": "#151a24", "border": "#2a313e", "title": "#f5f7fa", "meta": "#a9b2c3",
+        "label": "#e5e9f0", "sub": "#8b949e", "track": "#232b38", "count": "#f5f7fa",
+        "footer": "#7d8698",
+    },
+}
 
-def generate_time_svg(periods, total, range_label):
+
+def generate_time_svg(periods, total, range_label, theme="light"):
+    pal = PALETTES[theme]
     max_val = max(periods.values()) if any(periods.values()) else 1
     now_kst = datetime.now(LOCAL_TZ).strftime("%Y-%m-%d %H:%M KST")
 
@@ -196,17 +211,17 @@ def generate_time_svg(periods, total, range_label):
 
         rows_svg += (
             f'  <text x="110" y="{y + 18}" text-anchor="end" '
-            f'fill="#24292f" font-family="{FONT}" font-size="13">{label}</text>\n'
+            f'fill="{pal["label"]}" font-family="{FONT}" font-size="13">{label}</text>\n'
             f'  <text x="110" y="{y + 32}" text-anchor="end" '
-            f'fill="#8b949e" font-family="{FONT}" font-size="10">{hours}</text>\n'
-            f'  <rect x="{bar_x}" y="{y + 4}" width="{bar_max_w}" height="24" fill="#f1f3f6" rx="6"/>\n'
+            f'fill="{pal["sub"]}" font-family="{FONT}" font-size="10">{hours}</text>\n'
+            f'  <rect x="{bar_x}" y="{y + 4}" width="{bar_max_w}" height="24" fill="{pal["track"]}" rx="6"/>\n'
         )
         if w > 0:
             rows_svg += (
                 f'  <rect x="{bar_x}" y="{y + 4}" width="{w}" height="24" fill="url(#grad)" rx="6"/>\n'
             )
         rows_svg += (
-            f'  <text x="{bar_x + bar_max_w + 12}" y="{y + 22}" fill="#151a24" '
+            f'  <text x="{bar_x + bar_max_w + 12}" y="{y + 22}" fill="{pal["count"]}" '
             f'font-family="{FONT}" font-size="14" font-weight="bold">{count}</text>\n'
         )
 
@@ -216,20 +231,21 @@ def generate_time_svg(periods, total, range_label):
       <stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#ec4899"/>
     </linearGradient>
   </defs>
-  <rect width="{svg_w}" height="{svg_h}" fill="#ffffff" rx="12" stroke="#e3e7ee" stroke-width="1"/>
-  <text x="{svg_w // 2}" y="28" text-anchor="middle" fill="#151a24"
+  <rect width="{svg_w}" height="{svg_h}" fill="{pal["bg"]}" rx="12" stroke="{pal["border"]}" stroke-width="1"/>
+  <text x="{svg_w // 2}" y="28" text-anchor="middle" fill="{pal["title"]}"
         font-family="{FONT}" font-size="17" font-weight="bold">\ucee4\ubc0b \ud65c\ub3d9 \uc2dc\uac04\ub300 (KST)</text>
-  <text x="{svg_w // 2}" y="48" text-anchor="middle" fill="#6b7488"
+  <text x="{svg_w // 2}" y="48" text-anchor="middle" fill="{pal["meta"]}"
         font-family="{FONT}" font-size="12">{range_label} \u00b7 \ucd1d {total}\uac74</text>
-  <line x1="20" y1="58" x2="{svg_w - 20}" y2="58" stroke="#e3e7ee" stroke-width="1"/>
-{rows_svg}  <text x="{svg_w // 2}" y="{svg_h - 10}" text-anchor="middle" fill="#aeb6c2"
+  <line x1="20" y1="58" x2="{svg_w - 20}" y2="58" stroke="{pal["border"]}" stroke-width="1"/>
+{rows_svg}  <text x="{svg_w // 2}" y="{svg_h - 10}" text-anchor="middle" fill="{pal["footer"]}"
         font-family="{FONT}" font-size="10">{now_kst}</text>
 </svg>'''
 
 
 # ── SVG: 전체 활동 리포트 ──────────────────────────────
 
-def generate_overall_svg(daily, total, range_label):
+def generate_overall_svg(daily, total, range_label, theme="light"):
+    pal = PALETTES[theme]
     now_kst = datetime.now(LOCAL_TZ)
     now_str = now_kst.strftime("%Y-%m-%d %H:%M KST")
 
@@ -258,22 +274,22 @@ def generate_overall_svg(daily, total, range_label):
 
         daily_svg += (
             f'  <text x="110" y="{y + 20}" text-anchor="end" '
-            f'fill="#24292f" font-family="{FONT}" font-size="14">{day}</text>\n'
-            f'  <rect x="{bar_x}" y="{y + 4}" width="{bar_max_w}" height="22" fill="#f1f3f6" rx="5"/>\n'
+            f'fill="{pal["label"]}" font-family="{FONT}" font-size="14">{day}</text>\n'
+            f'  <rect x="{bar_x}" y="{y + 4}" width="{bar_max_w}" height="22" fill="{pal["track"]}" rx="5"/>\n'
         )
         if w > 0:
             daily_svg += (
                 f'  <rect x="{bar_x}" y="{y + 4}" width="{w}" height="22" fill="url(#grad_weekly)" rx="5"/>\n'
             )
         daily_svg += (
-            f'  <text x="{bar_x + bar_max_w + 12}" y="{y + 20}" fill="#151a24" '
+            f'  <text x="{bar_x + bar_max_w + 12}" y="{y + 20}" fill="{pal["count"]}" '
             f'font-family="{FONT}" font-size="13" font-weight="bold">{count}</text>\n'
         )
 
     # ── Summary line ──
     daily_svg += (
         f'  <text x="{svg_w // 2}" y="{summary_y}" text-anchor="middle" '
-        f'fill="#6b7488" font-family="{FONT}" font-size="11">'
+        f'fill="{pal["meta"]}" font-family="{FONT}" font-size="11">'
         f'\ud65c\ub3d9\uc77c {active_days}/7  \u00b7  '
         f'\uac00\uc7a5 \ud65c\ubc1c: {busiest_day}\uc694\uc77c  \u00b7  '
         f'\ucd1d {total}\uac74</text>\n'
@@ -285,14 +301,14 @@ def generate_overall_svg(daily, total, range_label):
       <stop offset="0%" stop-color="#a855f7"/><stop offset="100%" stop-color="#ec4899"/>
     </linearGradient>
   </defs>
-  <rect width="{svg_w}" height="{svg_h}" fill="#ffffff" rx="12" stroke="#e3e7ee" stroke-width="1"/>
-  <text x="{svg_w // 2}" y="28" text-anchor="middle" fill="#151a24"
+  <rect width="{svg_w}" height="{svg_h}" fill="{pal["bg"]}" rx="12" stroke="{pal["border"]}" stroke-width="1"/>
+  <text x="{svg_w // 2}" y="28" text-anchor="middle" fill="{pal["title"]}"
         font-family="{FONT}" font-size="17" font-weight="bold"
         >\uc804\uccb4 \ud65c\ub3d9 \ub9ac\ud3ec\ud2b8</text>
-  <text x="{svg_w // 2}" y="48" text-anchor="middle" fill="#6b7488"
+  <text x="{svg_w // 2}" y="48" text-anchor="middle" fill="{pal["meta"]}"
         font-family="{FONT}" font-size="12">{range_label}</text>
-  <line x1="20" y1="58" x2="{svg_w - 20}" y2="58" stroke="#e3e7ee" stroke-width="1"/>
-{daily_svg}  <text x="{svg_w // 2}" y="{svg_h - 10}" text-anchor="middle" fill="#aeb6c2"
+  <line x1="20" y1="58" x2="{svg_w - 20}" y2="58" stroke="{pal["border"]}" stroke-width="1"/>
+{daily_svg}  <text x="{svg_w // 2}" y="{svg_h - 10}" text-anchor="middle" fill="{pal["footer"]}"
         font-family="{FONT}" font-size="10">{now_str}</text>
 </svg>'''
 
@@ -310,8 +326,8 @@ def generate_section(total, reviews, total_all_time, range_label):
         f"<h3>\U0001f550 \uc2dc\uac04\ub300\ubcc4 \ucee4\ubc0b \ud65c\ub3d9</h3>\n"
         f"<sub>{range_label}</sub>\n"
         f"\n"
-        f'<img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-{total_all_time:,}-ffffff?style=for-the-badge&logo=git&logoColor=white" />\n'
-        f'<img src="https://img.shields.io/badge/%EB%88%84%EC%A0%81_%EC%BB%A4%EB%B0%8B-{total}-bd00ff?style=for-the-badge&logo=github&logoColor=white" />\n'
+        f'<img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-{total_all_time:,}-151A24?style=for-the-badge&logo=git&logoColor=white" />\n'
+        f'<img src="https://img.shields.io/badge/%EB%88%84%EC%A0%81_%EC%BB%A4%EB%B0%8B-{total}-a855f7?style=for-the-badge&logo=github&logoColor=white" />\n'
         f'<img src="https://img.shields.io/badge/%EC%BD%94%EB%93%9C_%EB%A6%AC%EB%B7%B0-{reviews}-06b6d4?style=for-the-badge&logo=codereview&logoColor=white" />\n'
         f"\n"
         f"<br><br>\n"
@@ -319,12 +335,14 @@ def generate_section(total, reviews, total_all_time, range_label):
         f'<table><tr>\n'
         f'<td align="center" valign="top">\n'
         f'<picture>\n'
-        f'  <img src="./assets/activity-telemetry.svg" width="420" />\n'
+        f'  <img src="./assets/activity-telemetry.svg#gh-light-mode-only" width="420" />\n'
+        f'  <img src="./assets/activity-telemetry-dark.svg#gh-dark-mode-only" width="420" />\n'
         f'</picture>\n'
         f'</td>\n'
         f'<td align="center" valign="top">\n'
         f'<picture>\n'
-        f'  <img src="./assets/overall-activity.svg" width="420" />\n'
+        f'  <img src="./assets/overall-activity.svg#gh-light-mode-only" width="420" />\n'
+        f'  <img src="./assets/overall-activity-dark.svg#gh-dark-mode-only" width="420" />\n'
         f'</picture>\n'
         f'</td>\n'
         f'</tr></table>\n'
@@ -402,11 +420,15 @@ def main():
     reviews = fetch_all_reviews(repos, GITHUB_USERNAME)
     print(f"[INFO] Reviews: {reviews}")
 
-    time_svg = generate_time_svg(periods, total, range_label)
-    save_svg(os.path.join(SVG_DIR, "activity-telemetry.svg"), time_svg)
+    save_svg(os.path.join(SVG_DIR, "activity-telemetry.svg"),
+             generate_time_svg(periods, total, range_label, theme="light"))
+    save_svg(os.path.join(SVG_DIR, "activity-telemetry-dark.svg"),
+             generate_time_svg(periods, total, range_label, theme="dark"))
 
-    overall_svg = generate_overall_svg(daily, total, range_label)
-    save_svg(os.path.join(SVG_DIR, "overall-activity.svg"), overall_svg)
+    save_svg(os.path.join(SVG_DIR, "overall-activity.svg"),
+             generate_overall_svg(daily, total, range_label, theme="light"))
+    save_svg(os.path.join(SVG_DIR, "overall-activity-dark.svg"),
+             generate_overall_svg(daily, total, range_label, theme="dark"))
 
     section = generate_section(total, reviews, total_all_time, range_label)
     update_readme(section)
