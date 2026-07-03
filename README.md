@@ -2,10 +2,8 @@
 
 <div align="center">
 
-<picture>
   <img src="./assets/hero.svg#gh-light-mode-only" width="100%" alt="강다니엘 — T0C0-AI · 솔로 메이커 · 바이브코더" />
   <img src="./assets/hero-dark.svg#gh-dark-mode-only" width="100%" alt="강다니엘 — T0C0-AI · 솔로 메이커 · 바이브코더" />
-</picture>
 
 <br><br>
 
@@ -38,10 +36,8 @@
 
 ## ⚡ whoami
 
-<picture>
   <img src="./assets/workspace.svg#gh-light-mode-only" width="100%" alt="아이소메트릭 작업실 — 강다니엘의 배틀스테이션" />
   <img src="./assets/workspace-dark.svg#gh-dark-mode-only" width="100%" alt="아이소메트릭 작업실 — 강다니엘의 배틀스테이션" />
-</picture>
 
 <sub>모니터 3면 · RGB 키보드 · 김 나는 커피 · 책상 위엔 토코 — 여기서 다 만든다</sub>
 
@@ -71,10 +67,8 @@
 
 <br>
 
-<picture>
   <img src="./assets/city.svg#gh-light-mode-only" width="100%" alt="토코 시티 — 아이소메트릭 프로젝트 도시" />
   <img src="./assets/city-dark.svg#gh-dark-mode-only" width="100%" alt="토코 시티 — 아이소메트릭 프로젝트 도시" />
-</picture>
 
 </div>
 
@@ -96,10 +90,8 @@
 
 <br>
 
-<picture>
   <img src="./assets/projects.svg#gh-light-mode-only" width="100%" alt="프로젝트 미니 디오라마 — 대표작 4종" />
   <img src="./assets/projects-dark.svg#gh-dark-mode-only" width="100%" alt="프로젝트 미니 디오라마 — 대표작 4종" />
-</picture>
 
 <sub>대표작 4종 — 각각 하나의 작은 세계</sub>
 
@@ -124,16 +116,12 @@
 
 <table><tr>
 <td align="center" valign="top">
-<picture>
   <img src="./assets/activity-telemetry.svg#gh-light-mode-only" width="420" />
   <img src="./assets/activity-telemetry-dark.svg#gh-dark-mode-only" width="420" />
-</picture>
 </td>
 <td align="center" valign="top">
-<picture>
   <img src="./assets/overall-activity.svg#gh-light-mode-only" width="420" />
   <img src="./assets/overall-activity-dark.svg#gh-dark-mode-only" width="420" />
-</picture>
 </td>
 </tr></table>
 
@@ -147,10 +135,8 @@
 
 <br>
 
-<picture>
   <img src="./assets/footer.svg#gh-light-mode-only" width="100%" alt="다음 커밋에서 만나요 — TOCO" />
   <img src="./assets/footer-dark.svg#gh-dark-mode-only" width="100%" alt="다음 커밋에서 만나요 — TOCO" />
-</picture>
 
 <div align="center">
 <sub>이 페이지의 히어로 · 아이소메트릭 작업실 · 토코 시티 · 프로젝트 디오라마 · 푸터는 라이브러리 없이 손으로 만든 애니메이션 SVG입니다 ✋</sub>
