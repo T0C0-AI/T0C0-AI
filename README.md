@@ -20,7 +20,7 @@
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=ts,js,py,cpp,nodejs,react,nextjs,tauri,tailwind,fastapi,docker,githubactions,git,github,postgres,redis,figma,vscode,linux,bash,vercel,aws&perline=11&theme=light" alt="기술 스택 아이콘" />
+<img src="https://skillicons.dev/icons?i=ts,js,py,cpp,nodejs,react,nextjs,tauri,tailwind,fastapi,docker,githubactions,git,github,postgres,redis,figma,vscode,linux,bash,vercel,aws&perline=11&theme=dark" alt="기술 스택 아이콘" />
 
 <br><br>
 
