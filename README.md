@@ -108,9 +108,9 @@
 <h3>🕐 시간대별 커밋 활동</h3>
 <sub>전체 누적</sub>
 
-<img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-9,673-151A24?style=for-the-badge&logo=git&logoColor=white" />
-<img src="https://img.shields.io/badge/%EB%88%84%EC%A0%81_%EC%BB%A4%EB%B0%8B-8554-a855f7?style=for-the-badge&logo=github&logoColor=white" />
-<img src="https://img.shields.io/badge/%EC%BD%94%EB%93%9C_%EB%A6%AC%EB%B7%B0-1-06b6d4?style=for-the-badge&logo=codereview&logoColor=white" />
+<img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-9,742-151A24?style=for-the-badge&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/%EB%88%84%EC%A0%81_%EC%BB%A4%EB%B0%8B-8623-a855f7?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/%EC%BD%94%EB%93%9C_%EB%A6%AC%EB%B7%B0-12-06b6d4?style=for-the-badge&logo=codereview&logoColor=white" />
 
 <br><br>
 
@@ -131,7 +131,7 @@
 
 <br>
 
-<sub>마지막 갱신: 2026-07-15 01:34 KST · GitHub Actions 자동 생성</sub>
+<sub>마지막 갱신: 2026-07-16 01:37 KST · GitHub Actions 자동 생성</sub>
 
 </div>
 
