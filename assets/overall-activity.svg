@@ -25,8 +25,8 @@
   <text x="382" y="156" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1340</text>
   <text x="110" y="190" text-anchor="end" fill="#24292f" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14">목</text>
   <rect x="120" y="174" width="250" height="22" fill="#f1f3f6" rx="5"/>
-  <rect x="120" y="174" width="208" height="22" fill="url(#grad_weekly)" rx="5"/>
-  <text x="382" y="190" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1502</text>
+  <rect x="120" y="174" width="214" height="22" fill="url(#grad_weekly)" rx="5"/>
+  <text x="382" y="190" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1549</text>
   <text x="110" y="224" text-anchor="end" fill="#24292f" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14">금</text>
   <rect x="120" y="208" width="250" height="22" fill="#f1f3f6" rx="5"/>
   <rect x="120" y="208" width="250" height="22" fill="url(#grad_weekly)" rx="5"/>
@@ -39,7 +39,7 @@
   <rect x="120" y="276" width="250" height="22" fill="#f1f3f6" rx="5"/>
   <rect x="120" y="276" width="109" height="22" fill="url(#grad_weekly)" rx="5"/>
   <text x="382" y="292" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">788</text>
-  <text x="240" y="334" text-anchor="middle" fill="#6b7488" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="11">활동일 7/7  ·  가장 활발: 금요일  ·  총 9299건</text>
+  <text x="240" y="334" text-anchor="middle" fill="#6b7488" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="11">활동일 7/7  ·  가장 활발: 금요일  ·  총 9346건</text>
   <text x="240" y="359" text-anchor="middle" fill="#aeb6c2"
-        font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="10">2026-07-30 00:55 KST</text>
+        font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="10">2026-07-31 00:54 KST</text>
 </svg>
