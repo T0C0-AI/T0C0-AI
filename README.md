@@ -2,10 +2,7 @@
 
 <div align="center">
 
-# 강다니엘 — 1인 개발자 / 프로덕트 메이커
-
-### 아이디어가 떠오르면 화면을 그리고, 며칠 안에 코드로 돌아옵니다.
-### 기획·설계·개발을 혼자 연결해, 느리게 합의하는 대신 빠르게 만들어 검증합니다.
+<img src="./assets/header-title.svg" width="100%" alt="강다니엘 — 1인 개발자 / 프로덕트 메이커" />
 
 <br>
 
@@ -13,7 +10,45 @@
 
 <br><br>
 
-<img src="https://skillicons.dev/icons?i=ts,js,python,kotlin,dart,rust,react,nextjs,solidjs,vite,electron,tauri,nodejs,fastapi,tailwind,prisma,docker,githubactions,git,github,vscode,aws,vercel,linux,bash&perline=13&theme=dark" alt="기술 스택 아이콘" />
+### 🛠️ 기술 스택
+
+<table align="center">
+<tr>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=ts" width="48" height="48" alt="TypeScript" /><br>TypeScript</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=js" width="48" height="48" alt="JavaScript" /><br>JavaScript</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=python" width="48" height="48" alt="Python" /><br>Python</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=kotlin" width="48" height="48" alt="Kotlin" /><br>Kotlin</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=dart" width="48" height="48" alt="Dart" /><br>Dart</td>
+</tr>
+<tr>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=rust" width="48" height="48" alt="Rust" /><br>Rust</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=react" width="48" height="48" alt="React" /><br>React</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=nextjs" width="48" height="48" alt="Next.js" /><br>Next.js</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=solidjs" width="48" height="48" alt="Solid.js" /><br>Solid.js</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=vite" width="48" height="48" alt="Vite" /><br>Vite</td>
+</tr>
+<tr>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=electron" width="48" height="48" alt="Electron" /><br>Electron</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=tauri" width="48" height="48" alt="Tauri" /><br>Tauri</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=nodejs" width="48" height="48" alt="Node.js" /><br>Node.js</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=fastapi" width="48" height="48" alt="FastAPI" /><br>FastAPI</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=tailwind" width="48" height="48" alt="Tailwind CSS" /><br>Tailwind CSS</td>
+</tr>
+<tr>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=prisma" width="48" height="48" alt="Prisma" /><br>Prisma</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=docker" width="48" height="48" alt="Docker" /><br>Docker</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=githubactions" width="48" height="48" alt="GitHub Actions" /><br>GitHub Actions</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=git" width="48" height="48" alt="Git" /><br>Git</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=github" width="48" height="48" alt="GitHub" /><br>GitHub</td>
+</tr>
+<tr>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=vscode" width="48" height="48" alt="VS Code" /><br>VS Code</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=aws" width="48" height="48" alt="AWS" /><br>AWS</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=vercel" width="48" height="48" alt="Vercel" /><br>Vercel</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=linux" width="48" height="48" alt="Linux" /><br>Linux</td>
+  <td align="center" width="96"><img src="https://skillicons.dev/icons?i=bash" width="48" height="48" alt="Bash" /><br>Bash</td>
+</tr>
+</table>
 
 </div>
 
@@ -23,7 +58,7 @@
 
 ## 🚀 내가 만든 AI 제품들
 
-<sub>Claude Code로 혼자 기획·개발·배포까지 끝내는 1인 제품 스튜디오 — 대부분 🔒 private, 완성되면 하나씩 공개</sub>
+<sub>✨ Claude Code로 혼자 기획·개발·배포까지 끝내는 1인 제품 스튜디오</sub>
 
 <br>
 
@@ -33,7 +68,7 @@
 
 <img src="./assets/projects/cowork-korea.svg" width="100%" alt="COWORK KOREA 카드" />
 
-**COWORK KOREA**
+**🧑‍💻 COWORK KOREA**
 <br>비개발자·바이브 코더가 채팅으로 앱을 만들고 안정성·보안까지 자동으로 챙기는 종합 코워크 IDE
 <br>`TypeScript` `React` `Electron` `Vite`
 
@@ -42,7 +77,7 @@
 
 <img src="./assets/projects/bombomkok.svg" width="100%" alt="봄봄콕 카드" />
 
-**봄봄콕**
+**🌸 봄봄콕**
 <br>여행 사진을 자동으로 모아 지도 위에 동선을 그려주는 추억 정리 앱
 <br>`TypeScript` `Next.js` `Prisma` `AWS S3`
 
@@ -51,7 +86,7 @@
 
 <img src="./assets/projects/korea-live.svg" width="100%" alt="Korea Live 카드" />
 
-**Korea Live**
+**🇰🇷 Korea Live**
 <br>대한민국 상황을 실시간으로 모아 보여주는 개인용 인텔리전스 대시보드
 <br>`JavaScript` `Node.js` `Capacitor`
 
@@ -62,7 +97,7 @@
 
 <img src="./assets/projects/blacktoco.svg" width="100%" alt="블랙토코 카드" />
 
-**블랙토코**
+**🛡️ 블랙토코**
 <br>AI 레드팀이 공격하고 AI 블루팀이 방어하며 배포 전 보안 구멍을 찾는 로컬 AI 레드팀 워크벤치
 <br>`JavaScript` `Electron` `Docker` `Python`
 
@@ -71,7 +106,7 @@
 
 <img src="./assets/projects/fixmypc.svg" width="100%" alt="FixMyPC 카드" />
 
-**FixMyPC**
+**🧹 FixMyPC**
 <br>맥이 느려지고 포트가 막힐 때 원인을 찾아 버튼 하나로 끝내는 로컬 클리너
 <br>`Rust` `Tauri` `React` `TypeScript`
 
@@ -80,7 +115,7 @@
 
 <img src="./assets/projects/selah.svg" width="100%" alt="Selah 카드" />
 
-**Selah**
+**📖 Selah**
 <br>성경 본문을 책처럼 읽되 저자·시대·성품을 옆에서 펼쳐보는 1인용 로컬 성경 앱
 <br>`TypeScript` `Electron` `Vite`
 
@@ -97,7 +132,6 @@
 <div align="center">
 
 <h3>🕐 시간대별 커밋 활동</h3>
-<sub>전체 누적</sub>
 
 <img src="https://img.shields.io/badge/%EC%A0%84%EC%B2%B4_%EC%BB%A4%EB%B0%8B-10,506-151A24?style=for-the-badge&logo=git&logoColor=white" />
 <img src="https://img.shields.io/badge/%EB%88%84%EC%A0%81_%EC%BB%A4%EB%B0%8B-9387-a855f7?style=for-the-badge&logo=github&logoColor=white" />

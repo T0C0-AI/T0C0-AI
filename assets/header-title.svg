@@ -1,0 +1,41 @@
+<svg viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="강다니엘 — 1인 개발자 / 프로덕트 메이커">
+  <defs>
+    <linearGradient id="nameGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#FFC831"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; }
+    .mono { font-family: 'Cascadia Code', 'D2Coding', Consolas, monospace; }
+  </style>
+
+  <rect x="0" y="0" width="1200" height="560" fill="#0D1117"/>
+  <rect x="0" y="0" width="1200" height="560" fill="none" stroke="#21262D" stroke-width="2"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#nameGrad)"/>
+
+  <text x="600" y="96" font-size="72" font-weight="800" fill="url(#nameGrad)" text-anchor="middle">강다니엘</text>
+
+  <text x="600" y="140" class="mono" font-size="20" font-weight="600" fill="#8B949E" text-anchor="middle" letter-spacing="3">1인 개발자 · 프로덕트 메이커</text>
+
+  <text x="600" y="210" font-size="27" font-weight="600" fill="#E6EDF3" text-anchor="middle">아이디어가 떠오르면 그날 화면부터 그리고, 며칠 안에</text>
+  <text x="600" y="250" font-size="27" font-weight="600" fill="#E6EDF3" text-anchor="middle">동작하는 코드로 돌아옵니다.</text>
+  <text x="600" y="298" font-size="22" fill="#9CA3AF" text-anchor="middle">기획 · 화면 설계 · 개발 · 배포까지 전 과정을 혼자 연결하고,</text>
+  <text x="600" y="332" font-size="22" fill="#9CA3AF" text-anchor="middle">느리게 합의하는 대신 빠르게 만들어서 빠르게 검증합니다.</text>
+
+  <line x1="300" y1="368" x2="900" y2="368" stroke="#21262D" stroke-width="1.5"/>
+
+  <g class="mono" font-size="19" font-weight="600">
+    <text x="300" y="410" fill="#22D3EE">✓</text>
+    <text x="326" y="410" fill="#C9D1D9">AI First — 코드부터 리서치까지 AI를 기본으로 쓴다</text>
+
+    <text x="300" y="446" fill="#22D3EE">✓</text>
+    <text x="326" y="446" fill="#C9D1D9">Vibe Coding — 대화하듯 빠르게 만들고 바로 고친다</text>
+
+    <text x="300" y="482" fill="#FFC831">✓</text>
+    <text x="326" y="482" fill="#C9D1D9">Product Focus — 기능이 아니라 문제 해결이 기준</text>
+
+    <text x="300" y="518" fill="#FFC831">✓</text>
+    <text x="326" y="518" fill="#C9D1D9">One-Person Builder — 기획부터 배포까지 혼자 끝낸다</text>
+  </g>
+</svg>
