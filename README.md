@@ -4,14 +4,6 @@
 
 <img src="./assets/header-title.svg" width="100%" alt="강다니엘 — 1인 개발자 / 프로덕트 메이커" />
 
-<br>
-
-<img src="./assets/header-banner.png" width="100%" alt="Code. Create. Make Impact. — 강다니엘의 작업 공간" />
-
-<br><br>
-
-### 🛠️ 기술 스택
-
 <table align="center">
 <tr>
   <td align="center" width="96"><img src="https://skillicons.dev/icons?i=ts" width="48" height="48" alt="TypeScript" /><br>TypeScript</td>
