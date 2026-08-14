@@ -2,10 +2,11 @@
 
 <div align="center">
 
-![강다니엘 — T0C0-AI · 솔로 메이커 · 바이브코더](./assets/hero.svg#gh-light-mode-only)
-![강다니엘 — T0C0-AI · 솔로 메이커 · 바이브코더](./assets/hero-dark.svg#gh-dark-mode-only)
+# 강다니엘 — T0C0-AI
 
-<br><br>
+### AI Developer · Indie Maker · Building Products with Claude Code
+
+<br>
 
 <a href="https://blog.naver.com/ejdnjs0930"><img src="https://img.shields.io/badge/BLOG-강다니엘의%20개발일지-03C75A?style=for-the-badge&logo=naver&logoColor=white&labelColor=000000" alt="네이버 블로그" /></a>
 <a href="mailto:ejdnjs0930@gmail.com"><img src="https://img.shields.io/badge/MAIL-ejdnjs0930@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white&labelColor=000000" alt="이메일" /></a>
@@ -17,29 +18,91 @@
 
 <br>
 
+## 🚀 AI PRODUCTS I BUILD
+
+<sub>Claude Code로 혼자 기획·개발·배포까지 끝내는 1인 제품 스튜디오 — 대부분 🔒 private, 완성되면 하나씩 공개</sub>
+
+<br>
+
+<table>
+<tr>
+<td width="33%" valign="top">
+
+<img src="./assets/projects/tococode.png" width="100%" alt="Tococode — 터미널 UI 실제 화면" />
+
+**Tococode**
+<br>토코AI 기반 TUI 코딩 에이전트 — Claude Code 세션의 SSH·검증·타임라인을 한 화면에
+<br>`TypeScript` `Solid.js` `Vite` `Drizzle` `Docker`
+
+</td>
+<td width="33%" valign="top">
+
+<img src="./assets/projects/bombomkok.png" width="100%" alt="봄봄콕 — 실제 앱 로그인 화면" />
+
+**봄봄콕**
+<br>여행 사진을 자동으로 모아 지도 위에 동선을 그려주는 추억 정리 앱
+<br>`TypeScript` `Next.js` `Prisma` `AWS S3` `Vercel`
+
+</td>
+<td width="33%" valign="top">
+
+<img src="./assets/projects/korea-live.svg" width="100%" alt="Korea Live 카드" />
+
+**Korea Live**
+<br>대한민국 상황을 실시간으로 모아 보여주는 개인용 인텔리전스 대시보드
+<br>`JavaScript` `Node.js` `Capacitor`
+
+</td>
+</tr>
+<tr>
+<td width="33%" valign="top">
+
+<img src="./assets/projects/wifi.svg" width="100%" alt="와이파이 지킴이 카드" />
+
+**와이파이 지킴이**
+<br>공유기 보안 취약점을 CISA KEV 기반으로 매일 자동 감시하는 개인용 보안 앱
+<br>`Kotlin` `Android` `Python`
+
+</td>
+<td width="33%" valign="top">
+
+<img src="./assets/projects/fixmypc.svg" width="100%" alt="FixMyPC 카드" />
+
+**FixMyPC**
+<br>맥이 느려지고 포트가 막힐 때 원인을 찾아 버튼 하나로 끝내는 로컬 클리너
+<br>`Rust` `Tauri` `React` `TypeScript`
+
+</td>
+<td width="33%" valign="top">
+
+<img src="./assets/projects/selah.svg" width="100%" alt="Selah 카드" />
+
+**Selah**
+<br>성경 본문을 책처럼 읽되 저자·시대·성품을 옆에서 펼쳐보는 1인용 로컬 성경 앱
+<br>`TypeScript` `Electron` `Vite`
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<img src="./assets/divider.svg" width="100%" alt="" />
+
+<br>
+
 ## 🛠️ 기술 스택
+
+> 실제로 만든 프로젝트들의 언어·의존성 기준 — Claude Code로 가장 많이 짠 스택만
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=ts,js,py,cpp,nodejs,react,nextjs,tauri,tailwind,fastapi,docker,githubactions,git,github,postgres,redis,figma,vscode,linux,bash,vercel,aws&perline=11&theme=dark" alt="기술 스택 아이콘" />
+<img src="https://skillicons.dev/icons?i=ts,js,python,kotlin,dart,rust,react,nextjs,solidjs,vite,electron,tauri,nodejs,fastapi,tailwind,prisma,docker,githubactions,git,github,vscode,aws,vercel,linux,bash&perline=13&theme=dark" alt="기술 스택 아이콘" />
 
 <br><br>
 
 <img src="https://img.shields.io/badge/Claude_Code-Daily_Driver-22D3EE?style=for-the-badge&logo=anthropic&logoColor=white&labelColor=151A24" alt="Claude Code" />
 <img src="https://img.shields.io/badge/TOCO-AI_Partner-FFC831?style=for-the-badge&labelColor=151A24" alt="TOCO AI Partner" />
-
-</div>
-
-<br>
-
-<div align="center">
-
-## ⚡ whoami
-
-![아이소메트릭 작업실 — 강다니엘의 배틀스테이션](./assets/workspace.svg#gh-light-mode-only)
-![아이소메트릭 작업실 — 강다니엘의 배틀스테이션](./assets/workspace-dark.svg#gh-dark-mode-only)
-
-<sub>모니터 3면 · RGB 키보드 · 김 나는 커피 · 책상 위엔 토코 — 여기서 다 만든다</sub>
 
 </div>
 
@@ -59,22 +122,7 @@
 
 <br>
 
-<div align="center">
-
-## 🏙 토코 시티
-
-<sub>내가 만든 프로젝트들이 사는 도시 — 토코가 마스코트로 지킨다</sub>
-
-<br>
-
-![토코 시티 — 아이소메트릭 프로젝트 도시](./assets/city.svg#gh-light-mode-only)
-![토코 시티 — 아이소메트릭 프로젝트 도시](./assets/city-dark.svg#gh-dark-mode-only)
-
-</div>
-
-<br>
-
-## 🚀 지금 만들고 있는 것들
+## 🧪 지금 만들고 있는 것들
 
 > 대부분 🔒 private — 솔로 메이커의 실험실은 원래 문이 닫혀 있다. 완성되면 하나씩 공개.
 
@@ -85,17 +133,6 @@
 | 🎬 **토코 크레이터** | 토코 캐릭터가 진행하는 AI 숏폼 자동 생성 시스템 | `Python` | 🔒 빌드 중 |
 | 🎙 **실시간 회의록** | 실시간 STT + 화자 분리 + 끝나면 AI 요약까지, 개인용 회의록 앱 | `TypeScript` | 🔒 빌드 중 |
 | 🏙 **창원 실시간 디지털 트윈** | 창원시 데이터를 3D 지도에 올리고 교통·날씨·대기질·재난을 실시간 패널로 — 로컬 우선 디지털 트윈 | `TypeScript` | 🔒 빌드 중 |
-
-<div align="center">
-
-<br>
-
-![프로젝트 미니 디오라마 — 대표작 4종](./assets/projects.svg#gh-light-mode-only)
-![프로젝트 미니 디오라마 — 대표작 4종](./assets/projects-dark.svg#gh-dark-mode-only)
-
-<sub>대표작 4종 — 각각 하나의 작은 세계</sub>
-
-</div>
 
 <br>
 
@@ -143,7 +180,7 @@
 ![다음 커밋에서 만나요 — TOCO](./assets/footer-dark.svg#gh-dark-mode-only)
 
 <div align="center">
-<sub>이 페이지의 히어로 · 아이소메트릭 작업실 · 토코 시티 · 프로젝트 디오라마 · 푸터는 라이브러리 없이 손으로 만든 애니메이션 SVG입니다 ✋</sub>
+<sub>Tococode·봄봄콕 카드는 실제 화면 캡처, 나머지 프로젝트 카드와 구분선·푸터는 라이브러리 없이 손으로 만든 SVG입니다 ✋</sub>
 <br>
 <sub>텔레메트리·3D 컨트리뷰션은 매일 자정(KST) GitHub Actions가 자동 갱신</sub>
 <br><br>
