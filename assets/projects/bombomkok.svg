@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="봄봄콕 — 여행 사진 추억 정리 앱">
+  <defs>
+    <linearGradient id="bbBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FB7185"/>
+      <stop offset="100%" stop-color="#FFC831"/>
+    </linearGradient>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif; }
+    .mono { font-family: 'Cascadia Code', 'D2Coding', Consolas, monospace; }
+  </style>
+
+  <rect x="0" y="0" width="800" height="500" fill="#0D1117"/>
+  <rect x="0" y="0" width="800" height="500" fill="none" stroke="#21262D" stroke-width="2"/>
+  <rect x="0" y="0" width="800" height="6" fill="url(#bbBar)"/>
+
+  <rect x="40" y="44" width="104" height="30" fill="#111827" stroke="#FB7185" stroke-width="1"/>
+  <text x="92" y="64" class="mono" font-size="14" fill="#FB7185" text-anchor="middle" letter-spacing="2">MOBILE</text>
+
+  <text x="40" y="150" font-size="52" font-weight="700" fill="#F3F4F6">봄봄콕</text>
+
+  <text x="40" y="220" font-size="23" fill="#9CA3AF">여행 사진을 올리기만 하면 한국 지도 위에</text>
+  <text x="40" y="256" font-size="23" fill="#9CA3AF">그날 동선이 그려지는 추억 정리 앱</text>
+  <text x="40" y="300" font-size="17" fill="#6B7280">잠들어 있던 사진 300장이 예쁜 추억으로 다시 살아난다</text>
+
+  <g class="mono" font-size="14" fill="#D1D5DB">
+    <rect x="40" y="420" width="118" height="32" fill="#161B22" stroke="#30363D"/>
+    <text x="99" y="441" text-anchor="middle">TypeScript</text>
+
+    <rect x="174" y="420" width="98" height="32" fill="#161B22" stroke="#30363D"/>
+    <text x="223" y="441" text-anchor="middle">Next.js</text>
+
+    <rect x="288" y="420" width="90" height="32" fill="#161B22" stroke="#30363D"/>
+    <text x="333" y="441" text-anchor="middle">Prisma</text>
+
+    <rect x="394" y="420" width="94" height="32" fill="#161B22" stroke="#30363D"/>
+    <text x="441" y="441" text-anchor="middle">AWS S3</text>
+  </g>
+</svg>
