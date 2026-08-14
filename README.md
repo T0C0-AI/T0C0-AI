@@ -59,10 +59,10 @@
 <tr>
 <td width="33%" valign="top">
 
-<img src="./assets/projects/blacktoco.png" width="100%" alt="블랙토코 — 실제 앱 스플래시 화면" />
+<img src="./assets/projects/blacktoco.svg" width="100%" alt="블랙토코 카드" />
 
 **블랙토코**
-<br>Claude가 "보안 때문에 안 됩니다"라고 거절하는 작업을 대신 처리하는 AI 브라우저 — Ollama 로컬 모델이라 데이터가 기기 밖으로 안 나간다
+<br>AI 레드팀이 공격하고 AI 블루팀이 방어하며 배포 전 보안 구멍을 찾는 로컬 AI 레드팀 워크벤치
 <br>`JavaScript` `Electron` `Docker` `Python`
 
 </td>
@@ -133,7 +133,7 @@
 ![다음 커밋에서 만나요 — TOCO](./assets/footer-dark.svg#gh-dark-mode-only)
 
 <div align="center">
-<sub>블랙토코 카드는 실제 앱 화면, 나머지 프로젝트 카드와 구분선·푸터는 라이브러리 없이 손으로 만든 SVG입니다 ✋</sub>
+<sub>프로젝트 카드·구분선·푸터는 라이브러리 없이 손으로 만든 SVG입니다 ✋</sub>
 <br>
 <sub>텔레메트리는 매일 자정(KST) GitHub Actions가 자동 갱신</sub>
 <br><br>
