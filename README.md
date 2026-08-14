@@ -2,9 +2,10 @@
 
 <div align="center">
 
-# 강다니엘 — T0C0-AI
+# 강다니엘 — 1인 개발자 / 프로덕트 메이커
 
-### AI Developer · Indie Maker · Building Products with Claude Code
+### 아이디어를 실제로 작동하는 제품으로 바꾸는 1인 개발자입니다.
+### 기획, 화면 설계, 개발을 직접 연결해 빠르게 검증합니다.
 
 <br>
 
