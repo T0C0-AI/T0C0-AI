@@ -9,7 +9,7 @@
 
 <br>
 
-<img src="https://komarev.com/ghpvc/?username=T0C0-AI&style=for-the-badge&color=yellow&label=PROFILE+VIEWS" alt="프로필 조회수" />
+<img src="./assets/header-banner.png" width="100%" alt="Code. Create. Make Impact. — 강다니엘의 작업 공간" />
 
 <br><br>
 
