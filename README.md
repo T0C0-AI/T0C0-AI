@@ -21,7 +21,7 @@
 
 <br>
 
-## 🚀 AI PRODUCTS I BUILD
+## 🚀 내가 만든 AI 제품들
 
 <sub>Claude Code로 혼자 기획·개발·배포까지 끝내는 1인 제품 스튜디오 — 대부분 🔒 private, 완성되면 하나씩 공개</sub>
 
