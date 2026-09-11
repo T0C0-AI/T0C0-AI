@@ -13,33 +13,33 @@
   <line x1="20" y1="58" x2="460" y2="58" stroke="#e3e7ee" stroke-width="1"/>
   <text x="110" y="88" text-anchor="end" fill="#24292f" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14">월</text>
   <rect x="120" y="72" width="250" height="22" fill="#f1f3f6" rx="5"/>
-  <rect x="120" y="72" width="159" height="22" fill="url(#grad_weekly)" rx="5"/>
-  <text x="382" y="88" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1156</text>
+  <rect x="120" y="72" width="150" height="22" fill="url(#grad_weekly)" rx="5"/>
+  <text x="382" y="88" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1429</text>
   <text x="110" y="122" text-anchor="end" fill="#24292f" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14">화</text>
   <rect x="120" y="106" width="250" height="22" fill="#f1f3f6" rx="5"/>
-  <rect x="120" y="106" width="195" height="22" fill="url(#grad_weekly)" rx="5"/>
-  <text x="382" y="122" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1413</text>
+  <rect x="120" y="106" width="177" height="22" fill="url(#grad_weekly)" rx="5"/>
+  <text x="382" y="122" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1684</text>
   <text x="110" y="156" text-anchor="end" fill="#24292f" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14">수</text>
   <rect x="120" y="140" width="250" height="22" fill="#f1f3f6" rx="5"/>
-  <rect x="120" y="140" width="185" height="22" fill="url(#grad_weekly)" rx="5"/>
-  <text x="382" y="156" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1340</text>
+  <rect x="120" y="140" width="186" height="22" fill="url(#grad_weekly)" rx="5"/>
+  <text x="382" y="156" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1771</text>
   <text x="110" y="190" text-anchor="end" fill="#24292f" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14">목</text>
   <rect x="120" y="174" width="250" height="22" fill="#f1f3f6" rx="5"/>
-  <rect x="120" y="174" width="213" height="22" fill="url(#grad_weekly)" rx="5"/>
-  <text x="382" y="190" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1549</text>
+  <rect x="120" y="174" width="198" height="22" fill="url(#grad_weekly)" rx="5"/>
+  <text x="382" y="190" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1889</text>
   <text x="110" y="224" text-anchor="end" fill="#24292f" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14">금</text>
   <rect x="120" y="208" width="250" height="22" fill="#f1f3f6" rx="5"/>
   <rect x="120" y="208" width="250" height="22" fill="url(#grad_weekly)" rx="5"/>
-  <text x="382" y="224" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1815</text>
+  <text x="382" y="224" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">2380</text>
   <text x="110" y="258" text-anchor="end" fill="#24292f" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14">토</text>
   <rect x="120" y="242" width="250" height="22" fill="#f1f3f6" rx="5"/>
-  <rect x="120" y="242" width="183" height="22" fill="url(#grad_weekly)" rx="5"/>
-  <text x="382" y="258" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1325</text>
+  <rect x="120" y="242" width="171" height="22" fill="url(#grad_weekly)" rx="5"/>
+  <text x="382" y="258" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1625</text>
   <text x="110" y="292" text-anchor="end" fill="#24292f" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="14">일</text>
   <rect x="120" y="276" width="250" height="22" fill="#f1f3f6" rx="5"/>
-  <rect x="120" y="276" width="109" height="22" fill="url(#grad_weekly)" rx="5"/>
-  <text x="382" y="292" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">789</text>
-  <text x="240" y="334" text-anchor="middle" fill="#6b7488" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="11">활동일 7/7  ·  가장 활발: 금요일  ·  총 9387건</text>
+  <rect x="120" y="276" width="116" height="22" fill="url(#grad_weekly)" rx="5"/>
+  <text x="382" y="292" fill="#151a24" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="13" font-weight="bold">1100</text>
+  <text x="240" y="334" text-anchor="middle" fill="#6b7488" font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="11">활동일 7/7  ·  가장 활발: 금요일  ·  총 11878건</text>
   <text x="240" y="359" text-anchor="middle" fill="#aeb6c2"
-        font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="10">2026-08-02 00:36 KST</text>
+        font-family="'Segoe UI', 'Apple SD Gothic Neo', sans-serif" font-size="10">2026-09-12 03:37 KST</text>
 </svg>
